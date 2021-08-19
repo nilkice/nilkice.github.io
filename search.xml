@@ -27,4 +27,17 @@
         <tag>测试</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Comment test</title>
+    <url>/2021/08/19/Comment-test/</url>
+    <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><p>千里之行，始于足下。——老子</p>
+]]></content>
+      <categories>
+        <category>test</category>
+        <category>comment</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
 </search>
