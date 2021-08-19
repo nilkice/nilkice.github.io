@@ -15,9 +15,22 @@
       </tags>
   </entry>
   <entry>
-    <title>how to create blog</title>
+    <title>测试！</title>
+    <url>/2021/08/19/%E6%B5%8B%E8%AF%95%EF%BC%81/</url>
+    <content><![CDATA[<p>测试………</p>
+]]></content>
+      <categories>
+        <category>test</category>
+        <category>update</category>
+      </categories>
+      <tags>
+        <tag>update error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于搭建blog时踩过的坑</title>
     <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<p>测试</p>
+    <content><![CDATA[<p>待更新….</p>
 ]]></content>
       <categories>
         <category>技术</category>

@@ -45,18 +45,45 @@
   </entry>
   
   <entry>
-    <title>how to create blog</title>
+    <title>测试！</title>
+    <link href="https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%EF%BC%81/"/>
+    <id>https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%EF%BC%81/</id>
+    <published>2021-08-19T03:38:40.000Z</published>
+    <updated>2021-08-19T16:19:36.158Z</updated>
+    
+    <content type="html"><![CDATA[<p>测试………</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测试………&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="test" scheme="https://likunlin.top/categories/test/"/>
+    
+    <category term="update" scheme="https://likunlin.top/categories/test/update/"/>
+    
+    
+    <category term="update error" scheme="https://likunlin.top/tags/update-error/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于搭建blog时踩过的坑</title>
     <link href="https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
     <id>https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
     <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-08-19T15:54:54.788Z</updated>
+    <updated>2021-08-19T16:23:41.506Z</updated>
     
-    <content type="html"><![CDATA[<p>测试</p>]]></content>
+    <content type="html"><![CDATA[<p>待更新….</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;测试&lt;/p&gt;
+    <summary type="html">&lt;p&gt;待更新….&lt;/p&gt;
 </summary>
       
     
