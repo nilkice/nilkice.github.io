@@ -13,4 +13,17 @@
         <tag>test</tag>
       </tags>
   </entry>
+  <entry>
+    <title>how to create blog</title>
+    <url>/2021/08/19/how-to-create-blog/</url>
+    <content><![CDATA[<p>测试</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>搭建blog</tag>
+      </tags>
+  </entry>
 </search>

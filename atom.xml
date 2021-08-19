@@ -43,4 +43,31 @@
     
   </entry>
   
+  <entry>
+    <title>how to create blog</title>
+    <link href="https://likunlin.top/2021/08/19/how-to-create-blog/"/>
+    <id>https://likunlin.top/2021/08/19/how-to-create-blog/</id>
+    <published>2021-08-19T03:38:40.000Z</published>
+    <updated>2021-08-19T14:22:47.795Z</updated>
+    
+    <content type="html"><![CDATA[<p>测试</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测试&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="blog" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/blog/"/>
+    
+    
+    <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
+    
+  </entry>
+  
 </feed>
