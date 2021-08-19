@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>how to create blog</title>
+    <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%88%91%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<p>测试</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>搭建blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Comment test</title>
     <url>/2021/08/19/Comment-test/</url>
     <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><p>千里之行，始于足下。——老子</p>
@@ -11,19 +24,6 @@
       </categories>
       <tags>
         <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>how to create blog</title>
-    <url>/2021/08/19/how-to-create-blog/</url>
-    <content><![CDATA[<p>测试</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>搭建blog</tag>
       </tags>
   </entry>
 </search>
