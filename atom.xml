@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-08-20T18:26:11.092Z</updated>
+  <updated>2021-08-19T16:23:41.506Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -17,28 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试各种东西...</title>
-    <link href="https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/"/>
-    <id>https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/</id>
+    <title>关于搭建blog时踩过的坑</title>
+    <link href="https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <id>https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
     <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-08-20T18:26:11.092Z</updated>
+    <updated>2021-08-19T16:23:41.506Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="嵌入哔哩哔哩-bilibili-视频"><a href="#嵌入哔哩哔哩-bilibili-视频" class="headerlink" title="嵌入哔哩哔哩(bilibili)视频"></a>嵌入哔哩哔哩(bilibili)视频</h2><div style="position: relative; padding: 30% 45%;"><iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?cid=145147963&aid=84267566&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe></div>]]></content>
+    <content type="html"><![CDATA[<p>待更新….</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;嵌入哔哩哔哩-bilibili-视频&quot;&gt;&lt;a href=&quot;#嵌入哔哩哔哩-bilibili-视频&quot; class=&quot;headerlink&quot; title=&quot;嵌入哔哩哔哩(bilibili)视频&quot;&gt;&lt;/a&gt;嵌入哔哩哔哩(bilibili)视频&lt;/h2&gt;&lt;div styl</summary>
+    <summary type="html">&lt;p&gt;待更新….&lt;/p&gt;
+</summary>
       
     
     
     
-    <category term="测试" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/"/>
+    <category term="技术" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="页面元素" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
+    <category term="blog" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/blog/"/>
     
     
-    <category term="页面元素" scheme="https://likunlin.top/tags/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
+    <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
     
   </entry>
   
@@ -71,29 +72,28 @@
   </entry>
   
   <entry>
-    <title>关于搭建blog时踩过的坑</title>
-    <link href="https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
-    <id>https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
+    <title>测试各种东西...</title>
+    <link href="https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/"/>
+    <id>https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/</id>
     <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-08-19T16:23:41.506Z</updated>
+    <updated>2021-08-20T18:36:02.332Z</updated>
     
-    <content type="html"><![CDATA[<p>待更新….</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="嵌入哔哩哔哩-bilibili-视频"><a href="#嵌入哔哩哔哩-bilibili-视频" class="headerlink" title="嵌入哔哩哔哩(bilibili)视频"></a>嵌入哔哩哔哩(bilibili)视频</h2><div style="position: relative; padding: 30% 45%;"><iframe         style="position: absolute;         width: 100%;         height: 100%;         left: 0; top: 0;"         src="https://player.bilibili.com/player.html?aid=758772694&bvid=BV1V64y19758&cid=359450650&page=1&as_wide=1&high_quality=1&danmaku=0"         frameborder="no"        allowfullscreen="true"         scrolling="no"></iframe></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;待更新….&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h2 id=&quot;嵌入哔哩哔哩-bilibili-视频&quot;&gt;&lt;a href=&quot;#嵌入哔哩哔哩-bilibili-视频&quot; class=&quot;headerlink&quot; title=&quot;嵌入哔哩哔哩(bilibili)视频&quot;&gt;&lt;/a&gt;嵌入哔哩哔哩(bilibili)视频&lt;/h2&gt;&lt;div styl</summary>
       
     
     
     
-    <category term="技术" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="测试" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/"/>
     
-    <category term="blog" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/blog/"/>
+    <category term="页面元素" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
     
     
-    <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
+    <category term="页面元素" scheme="https://likunlin.top/tags/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
     
   </entry>
   
