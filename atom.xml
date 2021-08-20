@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-08-19T15:51:45.009Z</updated>
+  <updated>2021-08-20T17:14:52.575Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://likunlin.top/2021/08/19/Comment-test/"/>
     <id>https://likunlin.top/2021/08/19/Comment-test/</id>
     <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-08-19T15:51:45.009Z</updated>
+    <updated>2021-08-20T17:14:52.575Z</updated>
     
     <content type="html"><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>千里之行，始于足下。——老子]]></content>
     
@@ -35,39 +35,12 @@
     
     
     
-    <category term="test" scheme="https://likunlin.top/categories/test/"/>
+    <category term="测试" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/"/>
     
-    <category term="comment" scheme="https://likunlin.top/categories/test/comment/"/>
-    
-    
-    <category term="test" scheme="https://likunlin.top/tags/test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试！</title>
-    <link href="https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%EF%BC%81/"/>
-    <id>https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%EF%BC%81/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-08-19T16:19:36.158Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试………</p>]]></content>
+    <category term="评论" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/%E8%AF%84%E8%AE%BA/"/>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;测试………&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="test" scheme="https://likunlin.top/categories/test/"/>
-    
-    <category term="update" scheme="https://likunlin.top/categories/test/update/"/>
-    
-    
-    <category term="update error" scheme="https://likunlin.top/tags/update-error/"/>
+    <category term="测试" scheme="https://likunlin.top/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
@@ -95,6 +68,32 @@
     
     
     <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试各种东西...</title>
+    <link href="https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/"/>
+    <id>https://likunlin.top/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/</id>
+    <published>2021-08-19T03:38:40.000Z</published>
+    <updated>2021-08-20T17:17:27.833Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="嵌入哔哩哔哩-bilibili-视频"><a href="#嵌入哔哩哔哩-bilibili-视频" class="headerlink" title="嵌入哔哩哔哩(bilibili)视频"></a>嵌入哔哩哔哩(bilibili)视频</h2><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="嵌入git动画"><a href="#嵌入git动画" class="headerlink" title="嵌入git动画"></a>嵌入git动画</h2><iframe height=500 width=500 src="https://i0.hdslb.com/bfs/archive/39047c5cca133d93beb3b5a99713ff6eb589341c.gif">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;嵌入哔哩哔哩-bilibili-视频&quot;&gt;&lt;a href=&quot;#嵌入哔哩哔哩-bilibili-视频&quot; class=&quot;headerlink&quot; title=&quot;嵌入哔哩哔哩(bilibili)视频&quot;&gt;&lt;/a&gt;嵌入哔哩哔哩(bilibili)视频&lt;/h2&gt;&lt;iframe s</summary>
+      
+    
+    
+    
+    <category term="测试" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="页面元素" scheme="https://likunlin.top/categories/%E6%B5%8B%E8%AF%95/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
+    
+    
+    <category term="页面元素" scheme="https://likunlin.top/tags/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
     
   </entry>
   

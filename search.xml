@@ -7,24 +7,11 @@
 千里之行，始于足下。——老子
 ]]></content>
       <categories>
-        <category>test</category>
-        <category>comment</category>
+        <category>测试</category>
+        <category>评论</category>
       </categories>
       <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试！</title>
-    <url>/2021/08/19/%E6%B5%8B%E8%AF%95%EF%BC%81/</url>
-    <content><![CDATA[<p>测试………</p>
-]]></content>
-      <categories>
-        <category>test</category>
-        <category>update</category>
-      </categories>
-      <tags>
-        <tag>update error</tag>
+        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
@@ -38,6 +25,20 @@
       </categories>
       <tags>
         <tag>搭建blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试各种东西...</title>
+    <url>/2021/08/19/%E6%B5%8B%E8%AF%95%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF/</url>
+    <content><![CDATA[<h2 id="嵌入哔哩哔哩-bilibili-视频"><a href="#嵌入哔哩哔哩-bilibili-视频" class="headerlink" title="嵌入哔哩哔哩(bilibili)视频"></a>嵌入哔哩哔哩(bilibili)视频</h2><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="嵌入git动画"><a href="#嵌入git动画" class="headerlink" title="嵌入git动画"></a>嵌入git动画</h2><iframe height=500 width=500 src="https://i0.hdslb.com/bfs/archive/39047c5cca133d93beb3b5a99713ff6eb589341c.gif">]]></content>
+      <categories>
+        <category>测试</category>
+        <category>页面元素</category>
+      </categories>
+      <tags>
+        <tag>页面元素</tag>
       </tags>
   </entry>
 </search>
