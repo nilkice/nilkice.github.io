@@ -21,8 +21,13 @@ var _hmt = _hmt || [];
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="nilkice,"> 
-    <meta name="description" content="welcome to my blog,待更新….
-"> 
+    <meta name="description" content="welcome to my blog,搭建工具：
+git
+node.js
+
+使用步骤：git：
+下载并安装好
+了解关于git的基本概念和指令，推荐这个：有关git的教程git作为github使用的重要工具，可单独进行深入学习，了解git,"> 
     <meta name="author" content="likunlin"> 
     <link rel="alternative" href="/atom.xml" title="nilkice" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -67,7 +72,28 @@ var _hmt = _hmt || [];
         </div>
         
         <div class="content markdown">
-            <p>待更新….</p>
+            <h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">node.js</a></li>
+</ul>
+<h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol>
+<li>下载并安装好</li>
+<li>了解关于git的基本概念和指令，推荐这个：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li>
+</ol>
+<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol>
+<li><p>下载并安装好</p>
+</li>
+<li><p>坑：</p>
+<ol>
+<li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul>
+<li>提示没有权限</li>
+<li>提示路径信息错误</li>
+</ul>
+</li>
+</ol>
+<p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p>
+</li>
+</ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">

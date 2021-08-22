@@ -3,11 +3,31 @@
   <entry>
     <title>关于搭建blog时踩过的坑</title>
     <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<p>待更新….</p>
+    <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
+<li><a href="https://git-scm.com/downloads">git</a></li>
+<li><a href="http://nodejs.cn/download/">node.js</a></li>
+</ul>
+<h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol>
+<li>下载并安装好</li>
+<li>了解关于git的基本概念和指令，推荐这个：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li>
+</ol>
+<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol>
+<li><p>下载并安装好</p>
+</li>
+<li><p>坑：</p>
+<ol>
+<li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul>
+<li>提示没有权限</li>
+<li>提示路径信息错误</li>
+</ul>
+</li>
+</ol>
+<p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>技术</category>
-        <category>blog</category>
       </categories>
       <tags>
         <tag>搭建blog</tag>
