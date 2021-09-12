@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Comment test</title>
+    <url>/2021/08/19/Comment-test/</url>
+    <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>
+千里之行，始于足下。——老子
+]]></content>
+      <categories>
+        <category>测试</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HRB_Station</title>
+    <url>/2021/08/19/HRB-Station/</url>
+    <content><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
+]]></content>
+      <categories>
+        <category>游记</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于搭建blog时踩过的坑</title>
     <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
     <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
@@ -25,26 +51,13 @@
 <p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p>
 </li>
 </ol>
+<p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0076.GIF"></p>
 ]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>搭建blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Comment test</title>
-    <url>/2021/08/19/Comment-test/</url>
-    <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>
-千里之行，始于足下。——老子
-]]></content>
-      <categories>
-        <category>测试</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
       </tags>
   </entry>
   <entry>

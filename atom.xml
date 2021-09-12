@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-08-22T10:14:31.861Z</updated>
+  <updated>2021-08-20T17:14:52.575Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>关于搭建blog时踩过的坑</title>
-    <link href="https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
-    <id>https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-08-22T10:14:31.861Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul><li><a href="https://git-scm.com/downloads">git</a></li><li><a href="http://nodejs.cn/download/">node.js</a></li></ul><h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol><li>下载并安装好</li><li>了解关于git的基本概念和指令，推荐这个：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li></ol><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol><li><p>下载并安装好</p></li><li><p>坑：</p><ol><li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul><li>提示没有权限</li><li>提示路径信息错误</li></ul></li></ol><p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;搭建工具：&quot;&gt;&lt;a href=&quot;#搭建工具：&quot; class=&quot;headerlink&quot; title=&quot;搭建工具：&quot;&gt;&lt;/a&gt;搭建工具：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;git&lt;/a&gt;&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
-    
-  </entry>
   
   <entry>
     <title>Comment test</title>
@@ -66,6 +41,55 @@
     
     
     <category term="测试" scheme="https://likunlin.top/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HRB_Station</title>
+    <link href="https://likunlin.top/2021/08/19/HRB-Station/"/>
+    <id>https://likunlin.top/2021/08/19/HRB-Station/</id>
+    <published>2021-08-19T03:38:40.000Z</published>
+    <updated>2021-09-12T02:57:01.404Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;哈尔滨-9-11&quot;&gt;&lt;a href=&quot;#哈尔滨-9-11&quot; class=&quot;headerlink&quot; title=&quot;哈尔滨-9.11&quot;&gt;&lt;/a&gt;哈尔滨-9.11&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/nilkice/</summary>
+      
+    
+    
+    
+    <category term="游记" scheme="https://likunlin.top/categories/%E6%B8%B8%E8%AE%B0/"/>
+    
+    
+    <category term="感想" scheme="https://likunlin.top/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于搭建blog时踩过的坑</title>
+    <link href="https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <id>https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
+    <published>2021-08-19T03:38:40.000Z</published>
+    <updated>2021-09-12T02:56:59.625Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul><li><a href="https://git-scm.com/downloads">git</a></li><li><a href="http://nodejs.cn/download/">node.js</a></li></ul><h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol><li>下载并安装好</li><li>了解关于git的基本概念和指令，推荐这个：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li></ol><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol><li><p>下载并安装好</p></li><li><p>坑：</p><ol><li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul><li>提示没有权限</li><li>提示路径信息错误</li></ul></li></ol><p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0076.GIF"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;搭建工具：&quot;&gt;&lt;a href=&quot;#搭建工具：&quot; class=&quot;headerlink&quot; title=&quot;搭建工具：&quot;&gt;&lt;/a&gt;搭建工具：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;git&lt;/a&gt;&lt;/li&gt;</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://likunlin.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
     
   </entry>
   
