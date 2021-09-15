@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-09-15T13:48:40.469Z</updated>
+  <updated>2021-08-20T17:14:52.575Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Python基础之数据类型</title>
-    <link href="https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-15T13:48:40.469Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><pre><code>* Python使用缩进来组织代码块，确保不混用Tab和空格* Python程序是大小写敏感的* Python是动态语言    * 变量本身类型不固定的语言称之为动态语言，与之相对的静态语言，静态语言在定义变量时必须指定变量类型    1. 数据类型和变量        * 整数            1. python可以处理任意大小的整数            2. 可以使用十六进制来方便的表示二进制                * 0x前缀和0-9，a-f表示            3. 10_000_000与10000000是完全一样的            4. 整数运算永远是精准的            5. 在Python中有两种除法                * 一种除法是/，计算结果是浮点数                * 还有一种是//，称为地板除，计算结果是整数            6. 取余，%                    * 浮点数            1. 按照科学计数法表示时，一个浮点数的小数点位置是可变的                * 1.23e9==12.3e8            2. 用科学计数法表示时，把10用e代替                    * 字符串            1. 表示文本时，可以使用&#39;    &#39;，或&quot;    &quot;            2. 转义字符\                * \n表示换行，\t表示制表，\\表示\                * 为了简化，Python允许使用r&#39;    &#39;表示&#39; &#39;内部的字符串默认不转义            3. 表示多行内容&#39;&#39;&#39;...&#39;&#39;&#39;                * 例如：print(&#39;&#39;&#39;line1...line2...line3&#39;&#39;&#39;)                        * 布尔值            1. 取值True和False，运算and，or，not                    * 空值            1. 空值是Python中一个特殊的值，用None表示，                    * 变量            1. 变量名必须是大小写英文，数字和_的组合，且不能用数字开头                    * 常量            1. 在Python中，通常用全部大写的变量名表示常量，如PI            2. 但事实上PI仍是一个变量    2. 小结        1. Python支持多种数据类型，在计算机内部，可以把任何数据都看成一个“对象”，而变量就是在程序中用来指向这些数据对象的，对变量赋值就是把数据和变量给关联起来</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Python基础&quot;&gt;&lt;a href=&quot;#Python基础&quot; class=&quot;headerlink&quot; title=&quot;Python基础&quot;&gt;&lt;/a&gt;Python基础&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;* Python使用缩进来组织代码块，确保不混用Tab和空格
-* Pytho</summary>
-      
-    
-    
-    
-    <category term="Python" scheme="https://likunlin.top/categories/Python/"/>
-    
-    <category term="数据类型" scheme="https://likunlin.top/categories/Python/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-    <category term="Python基础" scheme="https://likunlin.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
   
   <entry>
     <title>Comment test</title>
@@ -117,6 +90,34 @@
     
     
     <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python基础之数据类型</title>
+    <link href="https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2021-08-19T03:38:40.000Z</published>
+    <updated>2021-09-15T13:57:06.040Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><ul><li>Python使用缩进来组织代码块，确保不混用Tab和空格</li><li>Python程序是大小写敏感的</li><li>Python是动态语言</li><li>变量本身类型不固定的语言称之为动态语言，与之相对的静态语言，静态语言在定义变量时必须指定变量类型</li></ul><h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><ol><li>python可以处理任意大小的整数</li><li>可以使用十六进制来方便的表示二进制<ul><li>0x前缀和0-9，a-f表示</li></ul></li><li>10_000_000与10000000是完全一样的</li><li>整数运算永远是精准的</li><li>在Python中有两种除法<ul><li>一种除法是/，计算结果是浮点数</li><li>还有一种是//，称为地板除，计算结果是整数</li></ul></li><li>取余，%</li></ol><h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><ol><li>按照科学计数法表示时，一个浮点数的小数点位置是可变的<ul><li>1.23e9==12.3e8</li></ul></li><li>用科学计数法表示时，把10用e代替</li></ol><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ol><li>表示文本时，可以使用’    ‘，或”    “</li><li>转义字符\<ul><li>\n表示换行，\t表示制表，\表示\</li><li>为了简化，Python允许使用r’    ‘表示’ ‘内部的字符串默认不转义</li></ul></li><li>表示多行内容’’’…’’’<ul><li>例如：print(‘’’line1…line2…line3’’’)</li></ul></li></ol><h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><ol><li>取值True和False，运算and，or，not</li></ol><h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><ol><li>空值是Python中一个特殊的值，用None表示，</li></ol><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ol><li>变量名必须是大小写英文，数字和_的组合，且不能用数字开头</li></ol><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ol><li>在Python中，通常用全部大写的变量名表示常量，如PI</li><li>但事实上PI仍是一个变量</li></ol><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol><li>Python支持多种数据类型，在计算机内部，可以把任何数据都看成一个“对象”，而变量就是在程序中用来指向这些数据对象的，对变量赋值就是把数据和变量给关联起来</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Python基础&quot;&gt;&lt;a href=&quot;#Python基础&quot; class=&quot;headerlink&quot; title=&quot;Python基础&quot;&gt;&lt;/a&gt;Python基础&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Python使用缩进来组织代码块，确保不混用Tab和空格&lt;/li&gt;
+&lt;li&gt;Py</summary>
+      
+    
+    
+    
+    <category term="Python" scheme="https://likunlin.top/categories/Python/"/>
+    
+    <category term="数据类型" scheme="https://likunlin.top/categories/Python/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+    <category term="Python基础" scheme="https://likunlin.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
