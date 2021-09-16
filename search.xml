@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python基础之dict和set</title>
+    <url>/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/</url>
+    <content><![CDATA[<h1 id="dict和set"><a href="#dict和set" class="headerlink" title="dict和set"></a>dict和set</h1><h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><ul>
+<li>概念：Python内置了字典—dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度</li>
+<li>例如<pre><code>  * MathGrade = &#123;&#39;小明&#39; : 85, &#39;小红&#39; : 90, &#39;小白&#39; : 88&#125;
+  * print(MathGrade[&#39;小红&#39;])
+  * 90
+</code></pre>
+</li>
+<li>给定键的名称，可以非常快的查找到对应的值</li>
+<li>除了初始化指定键值对，还可以通过key放入<pre><code>  * MathGrade[&#39;小明&#39;] = 89
+</code></pre>
+</li>
+<li>一个key只能有一个对应的value</li>
+<li>key不存在时，插入value会出错</li>
+<li>可以使用 in 来判断key是否存在<pre><code>  * print(&#39;小明&#39; in MathGrade)
+  * True
+</code></pre>
+</li>
+<li>还可以通过dict的get()方法来判断，返回对应的值，或者自己指定值<pre><code>  * grade = MathGrade.get(&#39;小明&#39;)
+  * print(grade)
+  * 85
+  * -----分割线------
+  * grade = MathGrade.get(&#39;小黄&#39;, -1)
+  * print(grade)
+  * -1
+</code></pre>
+</li>
+<li>删除key，使用pop(key)，将对应的键值对全部删除<pre><code>  * MathGrade.pop(&#39;小明&#39;)
+</code></pre>
+</li>
+</ul>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><ul>
+<li>set和dict类似，也是一组key的集合，但不存储value，而且key不能重复</li>
+<li>创建一个set，需要传入一个list集合<pre><code>  * s = set([1, 2, 3])
+  * print(s)
+  * &#123;1, 2, 3&#125;
+</code></pre>
+</li>
+<li>重复的元素在set中自动被过滤</li>
+<li>在set中添加元素<pre><code>  * s.add(4)
+  * s.add(4)
+  * print(s)
+  * &#123;1, 2, 3, 4&#125;
+</code></pre>
+</li>
+<li>删除set中的元素<pre><code>  * s.remove(4)
+  * print(s)
+  * &#123;1, 2, 3, 4&#125;
+</code></pre>
+</li>
+<li>set的并集，交集运算<pre><code>  * s1 = set([1, 2, 3])
+  * s2 = set([1, 2, 4])
+  * print(s1 &amp; s2)
+  * &#123;1, 2&#125;
+  * print(s1 | s2)
+  * &#123;1, 2, 3, 4&#125;
+</code></pre>
+<h2 id="dict和list的区别"><a href="#dict和list的区别" class="headerlink" title="dict和list的区别"></a>dict和list的区别</h2></li>
+<li>dict<ul>
+<li>查找和插入的速度很快，不会随着key的增加而变慢</li>
+<li>占用内存多，浪费严重</li>
+</ul>
+</li>
+<li>list<ul>
+<li>查找和插入的速度随着元素的增多而变慢</li>
+<li>占用内存少<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2></li>
+</ul>
+</li>
+<li>dict和set的元素都是不可变对象，因此不可将list作为其元素</li>
+<li>原因是dict和set的实现由哈希表完成</li>
+<li>本教程代码均在Visual Studio2019中实现</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>dict和set</category>
+      </categories>
+      <tags>
+        <tag>Python基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Comment test</title>
     <url>/2021/08/19/Comment-test/</url>
     <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>
@@ -12,51 +95,6 @@
       </categories>
       <tags>
         <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HRB_Station</title>
-    <url>/2021/08/19/HRB-Station/</url>
-    <content><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
-]]></content>
-      <categories>
-        <category>游记</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于搭建blog时踩过的坑</title>
-    <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
-<li><a href="https://git-scm.com/downloads">git</a></li>
-<li><a href="http://nodejs.cn/download/">node.js</a></li>
-</ul>
-<h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol>
-<li>下载并安装好</li>
-<li>了解关于git的基本概念和指令，推荐这个：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li>
-</ol>
-<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol>
-<li><p>下载并安装好</p>
-</li>
-<li><p>坑：</p>
-<ol>
-<li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul>
-<li>提示没有权限</li>
-<li>提示路径信息错误</li>
-</ul>
-</li>
-</ol>
-<p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>搭建blog</tag>
       </tags>
   </entry>
   <entry>
@@ -125,6 +163,51 @@
       </categories>
       <tags>
         <tag>Python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HRB_Station</title>
+    <url>/2021/08/19/HRB-Station/</url>
+    <content><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
+]]></content>
+      <categories>
+        <category>游记</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于搭建blog时踩过的坑</title>
+    <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
+<li><a href="https://git-scm.com/downloads">git</a></li>
+<li><a href="http://nodejs.cn/download/">node.js</a></li>
+</ul>
+<h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol>
+<li>下载并安装好</li>
+<li>了解关于git的基本概念和指令，推荐这个：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li>
+</ol>
+<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol>
+<li><p>下载并安装好</p>
+</li>
+<li><p>坑：</p>
+<ol>
+<li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul>
+<li>提示没有权限</li>
+<li>提示路径信息错误</li>
+</ul>
+</li>
+</ol>
+<p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>搭建blog</tag>
       </tags>
   </entry>
   <entry>
