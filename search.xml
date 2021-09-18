@@ -84,17 +84,69 @@
       </tags>
   </entry>
   <entry>
-    <title>Comment test</title>
-    <url>/2021/08/19/Comment-test/</url>
-    <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>
-千里之行，始于足下。——老子
+    <title>Python基础之高级特性</title>
+    <url>/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="Python的高级特性"><a href="#Python的高级特性" class="headerlink" title="Python的高级特性"></a>Python的高级特性</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul>
+<li>在list，tuple，字符串中截取一段</li>
+<li>截取范围含头不含为，因为索引下标是从0开始的</li>
+</ul>
+<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><ul>
+<li>在python中只要是可迭代的对象，无论有无下标，都能迭代</li>
+<li>如list，tuple，dict</li>
+<li>判断一个对象是否为可迭代对象<ul>
+<li>isinstance(判断对象, Iterable)</li>
+<li>返回一个布尔值</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><ul>
+<li>用来创建list的生成式<ul>
+<li>如[x*x for x in range(1, 11)]</li>
+<li>把要生成的元素x*x的表达式写在for循环前面</li>
+</ul>
+</li>
+<li>使用if…else语句<ul>
+<li>如[x for x in range(1, 11) if x % 2 == 0]</li>
+<li>但不能在if后加上else</li>
+<li>如果if语句写在for前面，则需要加上else</li>
+<li>如[x if x % 2 == 0 else -x for x in range(1, 11)]</li>
+<li>因为for前面必须是一个表达式，且能计算出结果</li>
+</ul>
+</li>
+</ul>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><ul>
+<li>生成器generator，能一边循环一边计算<ul>
+<li>如(x*x for x in range(10))</li>
+</ul>
+</li>
+<li>与列表生成式的差别仅在于最外层的 [] 和 ()</li>
+<li>打印一个generator的方式<ul>
+<li>next()函数</li>
+<li>但通常使用for循环，因为generator是一个可迭代对象</li>
+</ul>
+</li>
+<li>关键字yield，如果一个函数定义中包括yield关键字，那么这个函数就是一个generator</li>
+<li>普通函数是顺序执行，遇到return语句或最后一行函数语句就返回，而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，下次重新重新从yield语句执行</li>
+</ul>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li>可以直接使用for循环的数据类型有<ul>
+<li>集合数据类型，如list，tuple，dict，set，str，等</li>
+<li>generator，包括生成器和带yield的generator function</li>
+</ul>
+</li>
+<li>这些可以直接作用于for循环的对象统称为可迭代对象：Iterable</li>
+<li>可以使用isinstance()判断一个对象是否是Iterable对象</li>
+<li>而可以被next()函数调用不断返回下一个值的对象称为迭代器：Iterator</li>
+<li>可以使用isinstance()判断一个对象是否是Iterator对象</li>
+<li>生成器都是Iterator</li>
+</ul>
 ]]></content>
       <categories>
-        <category>测试</category>
-        <category>评论</category>
+        <category>Python</category>
+        <category>高级特性</category>
       </categories>
       <tags>
-        <tag>测试</tag>
+        <tag>Python基础</tag>
       </tags>
   </entry>
   <entry>
@@ -166,18 +218,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HRB_Station</title>
-    <url>/2021/08/19/HRB-Station/</url>
-    <content><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
-]]></content>
-      <categories>
-        <category>游记</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于搭建blog时踩过的坑</title>
     <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
     <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
@@ -208,6 +248,32 @@
       </categories>
       <tags>
         <tag>搭建blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HRB_Station</title>
+    <url>/2021/08/19/HRB-Station/</url>
+    <content><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
+]]></content>
+      <categories>
+        <category>游记</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Comment test</title>
+    <url>/2021/08/19/Comment-test/</url>
+    <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>
+千里之行，始于足下。——老子
+]]></content>
+      <categories>
+        <category>测试</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
