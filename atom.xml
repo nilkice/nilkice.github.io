@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-09-18T15:03:15.920Z</updated>
+  <updated>2021-09-19T09:23:42.805Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DevSidecar开启增强模式</title>
+    <link href="https://likunlin.top/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://likunlin.top/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</id>
+    <published>2021-09-19T09:23:40.000Z</published>
+    <updated>2021-09-19T09:23:42.805Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;"><iframe         style="position: absolute;         width: 100%;         height: 100%;         left: 0; top: 0;"         src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0"         frameborder="no"        allowfullscreen="true"         scrolling="no"></iframe></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;DevSidecar开启增强模式&quot;&gt;&lt;a href=&quot;#DevSidecar开启增强模式&quot; class=&quot;headerlink&quot; title=&quot;DevSidecar开启增强模式&quot;&gt;&lt;/a&gt;DevSidecar开启增强模式&lt;/h2&gt;&lt;div style=&quot;posit</summary>
+      
+    
+    
+    
+    <category term="浏览器增强" scheme="https://likunlin.top/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A2%9E%E5%BC%BA/"/>
+    
+    
+    <category term="vpn" scheme="https://likunlin.top/tags/vpn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python基础之高级特性</title>
+    <link href="https://likunlin.top/2021/09/18/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/"/>
+    <id>https://likunlin.top/2021/09/18/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</id>
+    <published>2021-09-18T03:38:40.000Z</published>
+    <updated>2021-09-19T09:24:49.630Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python的高级特性"><a href="#Python的高级特性" class="headerlink" title="Python的高级特性"></a>Python的高级特性</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul><li>在list，tuple，字符串中截取一段</li><li>截取范围含头不含为，因为索引下标是从0开始的</li></ul><h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><ul><li>在python中只要是可迭代的对象，无论有无下标，都能迭代</li><li>如list，tuple，dict</li><li>判断一个对象是否为可迭代对象<ul><li>isinstance(判断对象, Iterable)</li><li>返回一个布尔值</li></ul></li></ul><h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><ul><li>用来创建list的生成式<ul><li>如[x*x for x in range(1, 11)]</li><li>把要生成的元素x*x的表达式写在for循环前面</li></ul></li><li>使用if…else语句<ul><li>如[x for x in range(1, 11) if x % 2 == 0]</li><li>但不能在if后加上else</li><li>如果if语句写在for前面，则需要加上else</li><li>如[x if x % 2 == 0 else -x for x in range(1, 11)]</li><li>因为for前面必须是一个表达式，且能计算出结果</li></ul></li></ul><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><ul><li>生成器generator，能一边循环一边计算<ul><li>如(x*x for x in range(10))</li></ul></li><li>与列表生成式的差别仅在于最外层的 [] 和 ()</li><li>打印一个generator的方式<ul><li>next()函数</li><li>但通常使用for循环，因为generator是一个可迭代对象</li></ul></li><li>关键字yield，如果一个函数定义中包括yield关键字，那么这个函数就是一个generator</li><li>普通函数是顺序执行，遇到return语句或最后一行函数语句就返回，而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，下次重新重新从yield语句执行</li></ul><h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul><li>可以直接使用for循环的数据类型有<ul><li>集合数据类型，如list，tuple，dict，set，str，等</li><li>generator，包括生成器和带yield的generator function</li></ul></li><li>这些可以直接作用于for循环的对象统称为可迭代对象：Iterable</li><li>可以使用isinstance()判断一个对象是否是Iterable对象</li><li>而可以被next()函数调用不断返回下一个值的对象称为迭代器：Iterator</li><li>可以使用isinstance()判断一个对象是否是Iterator对象</li><li>生成器都是Iterator</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Python的高级特性&quot;&gt;&lt;a href=&quot;#Python的高级特性&quot; class=&quot;headerlink&quot; title=&quot;Python的高级特性&quot;&gt;&lt;/a&gt;Python的高级特性&lt;/h1&gt;&lt;h2 id=&quot;切片&quot;&gt;&lt;a href=&quot;#切片&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    <category term="Python" scheme="https://likunlin.top/categories/Python/"/>
+    
+    <category term="高级特性" scheme="https://likunlin.top/categories/Python/%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/"/>
+    
+    
+    <category term="Python基础" scheme="https://likunlin.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python基础之dict和set</title>
-    <link href="https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/"/>
-    <id>https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-18T15:03:15.920Z</updated>
+    <link href="https://likunlin.top/2021/09/17/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/"/>
+    <id>https://likunlin.top/2021/09/17/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/</id>
+    <published>2021-09-17T03:38:40.000Z</published>
+    <updated>2021-09-19T09:24:35.811Z</updated>
     
     <content type="html"><![CDATA[<h1 id="dict和set"><a href="#dict和set" class="headerlink" title="dict和set"></a>dict和set</h1><h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><ul><li>概念：Python内置了字典—dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度</li><li>例如<pre><code>  * MathGrade = &#123;&#39;小明&#39; : 85, &#39;小红&#39; : 90, &#39;小白&#39; : 88&#125;  * print(MathGrade[&#39;小红&#39;])  * 90</code></pre></li><li>给定键的名称，可以非常快的查找到对应的值</li><li>除了初始化指定键值对，还可以通过key放入<pre><code>  * MathGrade[&#39;小明&#39;] = 89</code></pre></li><li>一个key只能有一个对应的value</li><li>key不存在时，插入value会出错</li><li>可以使用 in 来判断key是否存在<pre><code>  * print(&#39;小明&#39; in MathGrade)  * True</code></pre></li><li>还可以通过dict的get()方法来判断，返回对应的值，或者自己指定值<pre><code>  * grade = MathGrade.get(&#39;小明&#39;)  * print(grade)  * 85  * -----分割线------  * grade = MathGrade.get(&#39;小黄&#39;, -1)  * print(grade)  * -1</code></pre></li><li>删除key，使用pop(key)，将对应的键值对全部删除<pre><code>  * MathGrade.pop(&#39;小明&#39;)</code></pre></li></ul><h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><ul><li>set和dict类似，也是一组key的集合，但不存储value，而且key不能重复</li><li>创建一个set，需要传入一个list集合<pre><code>  * s = set([1, 2, 3])  * print(s)  * &#123;1, 2, 3&#125;</code></pre></li><li>重复的元素在set中自动被过滤</li><li>在set中添加元素<pre><code>  * s.add(4)  * s.add(4)  * print(s)  * &#123;1, 2, 3, 4&#125;</code></pre></li><li>删除set中的元素<pre><code>  * s.remove(4)  * print(s)  * &#123;1, 2, 3&#125;</code></pre></li><li>set的并集，交集运算<pre><code>  * s1 = set([1, 2, 3])  * s2 = set([1, 2, 4])  * print(s1 &amp; s2)  * &#123;1, 2&#125;  * print(s1 | s2)  * &#123;1, 2, 3, 4&#125;</code></pre><h2 id="dict和list的区别"><a href="#dict和list的区别" class="headerlink" title="dict和list的区别"></a>dict和list的区别</h2></li><li>dict<ul><li>查找和插入的速度很快，不会随着key的增加而变慢</li><li>占用内存多，浪费严重</li></ul></li><li>list<ul><li>查找和插入的速度随着元素的增多而变慢</li><li>占用内存少<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2></li></ul></li><li>dict和set的元素都是不可变对象，因此不可将list作为其元素</li><li>原因是dict和set的实现由哈希表完成</li><li>本教程代码均在Visual Studio2019中实现</li></ul>]]></content>
     
@@ -43,35 +93,11 @@
   </entry>
   
   <entry>
-    <title>HRB_Station</title>
-    <link href="https://likunlin.top/2021/08/19/HRB-Station/"/>
-    <id>https://likunlin.top/2021/08/19/HRB-Station/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-12T02:57:01.404Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;哈尔滨-9-11&quot;&gt;&lt;a href=&quot;#哈尔滨-9-11&quot; class=&quot;headerlink&quot; title=&quot;哈尔滨-9.11&quot;&gt;&lt;/a&gt;哈尔滨-9.11&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/nilkice/</summary>
-      
-    
-    
-    
-    <category term="游记" scheme="https://likunlin.top/categories/%E6%B8%B8%E8%AE%B0/"/>
-    
-    
-    <category term="感想" scheme="https://likunlin.top/tags/%E6%84%9F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python基础之数据类型</title>
-    <link href="https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-15T13:57:06.040Z</updated>
+    <link href="https://likunlin.top/2021/09/16/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://likunlin.top/2021/09/16/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2021-09-16T03:38:40.000Z</published>
+    <updated>2021-09-19T09:24:57.416Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><ul><li>Python使用缩进来组织代码块，确保不混用Tab和空格</li><li>Python程序是大小写敏感的</li><li>Python是动态语言</li><li>变量本身类型不固定的语言称之为动态语言，与之相对的静态语言，静态语言在定义变量时必须指定变量类型</li></ul><h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><ol><li>python可以处理任意大小的整数</li><li>可以使用十六进制来方便的表示二进制<ul><li>0x前缀和0-9，a-f表示</li></ul></li><li>10_000_000与10000000是完全一样的</li><li>整数运算永远是精准的</li><li>在Python中有两种除法<ul><li>一种除法是/，计算结果是浮点数</li><li>还有一种是//，称为地板除，计算结果是整数</li></ul></li><li>取余，%</li></ol><h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><ol><li>按照科学计数法表示时，一个浮点数的小数点位置是可变的<ul><li>1.23e9==12.3e8</li></ul></li><li>用科学计数法表示时，把10用e代替</li></ol><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ol><li>表示文本时，可以使用’    ‘，或”    “</li><li>转义字符\<ul><li>\n表示换行，\t表示制表，\表示\</li><li>为了简化，Python允许使用r’    ‘表示’ ‘内部的字符串默认不转义</li></ul></li><li>表示多行内容’’’…’’’<ul><li>例如：print(‘’’line1…line2…line3’’’)</li></ul></li></ol><h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><ol><li>取值True和False，运算and，or，not</li></ol><h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><ol><li>空值是Python中一个特殊的值，用None表示，</li></ol><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ol><li>变量名必须是大小写英文，数字和_的组合，且不能用数字开头</li></ol><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ol><li>在Python中，通常用全部大写的变量名表示常量，如PI</li><li>但事实上PI仍是一个变量</li></ol><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol><li>Python支持多种数据类型，在计算机内部，可以把任何数据都看成一个“对象”，而变量就是在程序中用来指向这些数据对象的，对变量赋值就是把数据和变量给关联起来</li></ol>]]></content>
     
@@ -95,37 +121,11 @@
   </entry>
   
   <entry>
-    <title>Python基础之高级特性</title>
-    <link href="https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/"/>
-    <id>https://likunlin.top/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-18T09:02:28.377Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Python的高级特性"><a href="#Python的高级特性" class="headerlink" title="Python的高级特性"></a>Python的高级特性</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul><li>在list，tuple，字符串中截取一段</li><li>截取范围含头不含为，因为索引下标是从0开始的</li></ul><h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><ul><li>在python中只要是可迭代的对象，无论有无下标，都能迭代</li><li>如list，tuple，dict</li><li>判断一个对象是否为可迭代对象<ul><li>isinstance(判断对象, Iterable)</li><li>返回一个布尔值</li></ul></li></ul><h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><ul><li>用来创建list的生成式<ul><li>如[x*x for x in range(1, 11)]</li><li>把要生成的元素x*x的表达式写在for循环前面</li></ul></li><li>使用if…else语句<ul><li>如[x for x in range(1, 11) if x % 2 == 0]</li><li>但不能在if后加上else</li><li>如果if语句写在for前面，则需要加上else</li><li>如[x if x % 2 == 0 else -x for x in range(1, 11)]</li><li>因为for前面必须是一个表达式，且能计算出结果</li></ul></li></ul><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><ul><li>生成器generator，能一边循环一边计算<ul><li>如(x*x for x in range(10))</li></ul></li><li>与列表生成式的差别仅在于最外层的 [] 和 ()</li><li>打印一个generator的方式<ul><li>next()函数</li><li>但通常使用for循环，因为generator是一个可迭代对象</li></ul></li><li>关键字yield，如果一个函数定义中包括yield关键字，那么这个函数就是一个generator</li><li>普通函数是顺序执行，遇到return语句或最后一行函数语句就返回，而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，下次重新重新从yield语句执行</li></ul><h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul><li>可以直接使用for循环的数据类型有<ul><li>集合数据类型，如list，tuple，dict，set，str，等</li><li>generator，包括生成器和带yield的generator function</li></ul></li><li>这些可以直接作用于for循环的对象统称为可迭代对象：Iterable</li><li>可以使用isinstance()判断一个对象是否是Iterable对象</li><li>而可以被next()函数调用不断返回下一个值的对象称为迭代器：Iterator</li><li>可以使用isinstance()判断一个对象是否是Iterator对象</li><li>生成器都是Iterator</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Python的高级特性&quot;&gt;&lt;a href=&quot;#Python的高级特性&quot; class=&quot;headerlink&quot; title=&quot;Python的高级特性&quot;&gt;&lt;/a&gt;Python的高级特性&lt;/h1&gt;&lt;h2 id=&quot;切片&quot;&gt;&lt;a href=&quot;#切片&quot; class=&quot;head</summary>
-      
-    
-    
-    
-    <category term="Python" scheme="https://likunlin.top/categories/Python/"/>
-    
-    <category term="高级特性" scheme="https://likunlin.top/categories/Python/%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/"/>
-    
-    
-    <category term="Python基础" scheme="https://likunlin.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于搭建blog时踩过的坑</title>
-    <link href="https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
-    <id>https://likunlin.top/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-12T03:11:42.767Z</updated>
+    <link href="https://likunlin.top/2021/09/15/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <id>https://likunlin.top/2021/09/15/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</id>
+    <published>2021-09-15T03:38:40.000Z</published>
+    <updated>2021-09-19T09:25:10.422Z</updated>
     
     <content type="html"><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul><li><a href="https://git-scm.com/downloads">git</a></li><li><a href="http://nodejs.cn/download/">node.js</a></li></ul><h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol><li>下载并安装好</li><li>了解关于git的基本概念和指令，推荐这个：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li></ol><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol><li><p>下载并安装好</p></li><li><p>坑：</p><ol><li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul><li>提示没有权限</li><li>提示路径信息错误</li></ul></li></ol><p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p></li></ol>]]></content>
     
@@ -142,6 +142,30 @@
     
     
     <category term="搭建blog" scheme="https://likunlin.top/tags/%E6%90%AD%E5%BB%BAblog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HRB_Station</title>
+    <link href="https://likunlin.top/2021/09/11/HRB-Station/"/>
+    <id>https://likunlin.top/2021/09/11/HRB-Station/</id>
+    <published>2021-09-11T03:38:40.000Z</published>
+    <updated>2021-09-19T09:24:16.304Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;哈尔滨-9-11&quot;&gt;&lt;a href=&quot;#哈尔滨-9-11&quot; class=&quot;headerlink&quot; title=&quot;哈尔滨-9.11&quot;&gt;&lt;/a&gt;哈尔滨-9.11&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/nilkice/</summary>
+      
+    
+    
+    
+    <category term="游记" scheme="https://likunlin.top/categories/%E6%B8%B8%E8%AE%B0/"/>
+    
+    
+    <category term="感想" scheme="https://likunlin.top/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
@@ -168,30 +192,6 @@
     
     
     <category term="页面元素" scheme="https://likunlin.top/tags/%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DevSidecar开启增强模式</title>
-    <link href="https://likunlin.top/2021/08/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://likunlin.top/2021/08/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</id>
-    <published>2021-08-19T03:38:40.000Z</published>
-    <updated>2021-09-19T09:18:47.322Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;"><iframe         style="position: absolute;         width: 100%;         height: 100%;         left: 0; top: 0;"         src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0"         frameborder="no"        allowfullscreen="true"         scrolling="no"></iframe></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;DevSidecar开启增强模式&quot;&gt;&lt;a href=&quot;#DevSidecar开启增强模式&quot; class=&quot;headerlink&quot; title=&quot;DevSidecar开启增强模式&quot;&gt;&lt;/a&gt;DevSidecar开启增强模式&lt;/h2&gt;&lt;div style=&quot;posit</summary>
-      
-    
-    
-    
-    <category term="浏览器增强" scheme="https://likunlin.top/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A2%9E%E5%BC%BA/"/>
-    
-    
-    <category term="vpn" scheme="https://likunlin.top/tags/vpn/"/>
     
   </entry>
   

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Python基础之dict和set</title>
-    <url>/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/</url>
+    <url>/2021/09/17/Python%E5%9F%BA%E7%A1%80%E4%B9%8Bdict%E5%92%8Cset/</url>
     <content><![CDATA[<h1 id="dict和set"><a href="#dict和set" class="headerlink" title="dict和set"></a>dict和set</h1><h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><ul>
 <li>概念：Python内置了字典—dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度</li>
 <li>例如<pre><code>  * MathGrade = &#123;&#39;小明&#39; : 85, &#39;小红&#39; : 90, &#39;小白&#39; : 88&#125;
@@ -85,7 +85,7 @@
   </entry>
   <entry>
     <title>HRB_Station</title>
-    <url>/2021/08/19/HRB-Station/</url>
+    <url>/2021/09/11/HRB-Station/</url>
     <content><![CDATA[<h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
 ]]></content>
       <categories>
@@ -97,7 +97,7 @@
   </entry>
   <entry>
     <title>Python基础之数据类型</title>
-    <url>/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <url>/2021/09/16/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><ul>
 <li>Python使用缩进来组织代码块，确保不混用Tab和空格</li>
 <li>Python程序是大小写敏感的</li>
@@ -165,7 +165,7 @@
   </entry>
   <entry>
     <title>Python基础之高级特性</title>
-    <url>/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
+    <url>/2021/09/18/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<h1 id="Python的高级特性"><a href="#Python的高级特性" class="headerlink" title="Python的高级特性"></a>Python的高级特性</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul>
 <li>在list，tuple，字符串中截取一段</li>
 <li>截取范围含头不含为，因为索引下标是从0开始的</li>
@@ -231,7 +231,7 @@
   </entry>
   <entry>
     <title>关于搭建blog时踩过的坑</title>
-    <url>/2021/08/19/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
+    <url>/2021/09/15/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
     <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
 <li><a href="https://git-scm.com/downloads">git</a></li>
 <li><a href="http://nodejs.cn/download/">node.js</a></li>
@@ -288,7 +288,7 @@
   </entry>
   <entry>
     <title>DevSidecar开启增强模式</title>
-    <url>/2021/08/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</url>
+    <url>/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;">
 <iframe 
         style="position: absolute; 

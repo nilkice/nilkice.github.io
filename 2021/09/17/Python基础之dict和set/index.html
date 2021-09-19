@@ -16,13 +16,14 @@ var _hmt = _hmt || [];
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>HRB_Station - nilkice</title>
+    <title>Python基础之dict和set - nilkice</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="nilkice,"> 
-    <meta name="description" content="welcome to my blog,哈尔滨-9.11九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…
-"> 
+    <meta name="description" content="welcome to my blog,dict和setdict
+概念：Python内置了字典—dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度
+例如  ,"> 
     <meta name="author" content="likunlin"> 
     <link rel="alternative" href="/atom.xml" title="nilkice" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -42,7 +43,7 @@ var _hmt = _hmt || [];
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://likunlin.top"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">HRB_Station</h3>
+    <h3 class="subtitle">Python基础之dict和set</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -57,17 +58,87 @@ var _hmt = _hmt || [];
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">HRB_Station</h1>
+        <h1 class="title">Python基础之dict和set</h1>
         <div class="stuff">
-            <span>八月 19, 2021</span>
+            <span>九月 17, 2021</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%84%9F%E6%83%B3/" rel="tag">感想</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Python%E5%9F%BA%E7%A1%80/" rel="tag">Python基础</a></li></ul>
 
 
         </div>
         
         <div class="content markdown">
-            <h2 id="哈尔滨-9-11"><a href="#哈尔滨-9-11" class="headerlink" title="哈尔滨-9.11"></a>哈尔滨-9.11</h2><p><img src="https://cdn.jsdelivr.net/gh/nilkice/blog-img/IMG_0073.JPG"><br>九月十一号的哈尔滨火车站，我穿着短衣短袖在十多度的冷风中，差点没把我送走…</p>
+            <h1 id="dict和set"><a href="#dict和set" class="headerlink" title="dict和set"></a>dict和set</h1><h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><ul>
+<li>概念：Python内置了字典—dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度</li>
+<li>例如<pre><code>  * MathGrade = &#123;&#39;小明&#39; : 85, &#39;小红&#39; : 90, &#39;小白&#39; : 88&#125;
+  * print(MathGrade[&#39;小红&#39;])
+  * 90
+</code></pre>
+</li>
+<li>给定键的名称，可以非常快的查找到对应的值</li>
+<li>除了初始化指定键值对，还可以通过key放入<pre><code>  * MathGrade[&#39;小明&#39;] = 89
+</code></pre>
+</li>
+<li>一个key只能有一个对应的value</li>
+<li>key不存在时，插入value会出错</li>
+<li>可以使用 in 来判断key是否存在<pre><code>  * print(&#39;小明&#39; in MathGrade)
+  * True
+</code></pre>
+</li>
+<li>还可以通过dict的get()方法来判断，返回对应的值，或者自己指定值<pre><code>  * grade = MathGrade.get(&#39;小明&#39;)
+  * print(grade)
+  * 85
+  * -----分割线------
+  * grade = MathGrade.get(&#39;小黄&#39;, -1)
+  * print(grade)
+  * -1
+</code></pre>
+</li>
+<li>删除key，使用pop(key)，将对应的键值对全部删除<pre><code>  * MathGrade.pop(&#39;小明&#39;)
+</code></pre>
+</li>
+</ul>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><ul>
+<li>set和dict类似，也是一组key的集合，但不存储value，而且key不能重复</li>
+<li>创建一个set，需要传入一个list集合<pre><code>  * s = set([1, 2, 3])
+  * print(s)
+  * &#123;1, 2, 3&#125;
+</code></pre>
+</li>
+<li>重复的元素在set中自动被过滤</li>
+<li>在set中添加元素<pre><code>  * s.add(4)
+  * s.add(4)
+  * print(s)
+  * &#123;1, 2, 3, 4&#125;
+</code></pre>
+</li>
+<li>删除set中的元素<pre><code>  * s.remove(4)
+  * print(s)
+  * &#123;1, 2, 3&#125;
+</code></pre>
+</li>
+<li>set的并集，交集运算<pre><code>  * s1 = set([1, 2, 3])
+  * s2 = set([1, 2, 4])
+  * print(s1 &amp; s2)
+  * &#123;1, 2&#125;
+  * print(s1 | s2)
+  * &#123;1, 2, 3, 4&#125;
+</code></pre>
+<h2 id="dict和list的区别"><a href="#dict和list的区别" class="headerlink" title="dict和list的区别"></a>dict和list的区别</h2></li>
+<li>dict<ul>
+<li>查找和插入的速度很快，不会随着key的增加而变慢</li>
+<li>占用内存多，浪费严重</li>
+</ul>
+</li>
+<li>list<ul>
+<li>查找和插入的速度随着元素的增多而变慢</li>
+<li>占用内存少<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2></li>
+</ul>
+</li>
+<li>dict和set的元素都是不可变对象，因此不可将list作为其元素</li>
+<li>原因是dict和set的实现由哈希表完成</li>
+<li>本教程代码均在Visual Studio2019中实现</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">

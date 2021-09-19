@@ -16,18 +16,16 @@ var _hmt = _hmt || [];
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>关于搭建blog时踩过的坑 - nilkice</title>
+    <title>Python基础之数据类型 - nilkice</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="nilkice,"> 
-    <meta name="description" content="welcome to my blog,搭建工具：
-git
-node.js
-
-使用步骤：git：
-下载并安装好
-了解关于git的基本概念和指令，推荐这个：有关git的教程git作为github使用的重要工具，可单独进行深入学习，了解git,"> 
+    <meta name="description" content="welcome to my blog,Python基础
+Python使用缩进来组织代码块，确保不混用Tab和空格
+Python程序是大小写敏感的
+Python是动态语言
+变量本身类型不固定的语言称之为动态语言，与之相对的静态语言，静态语,"> 
     <meta name="author" content="likunlin"> 
     <link rel="alternative" href="/atom.xml" title="nilkice" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -47,7 +45,7 @@ node.js
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://likunlin.top"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">关于搭建blog时踩过的坑</h3>
+    <h3 class="subtitle">Python基础之数据类型</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -62,59 +60,77 @@ node.js
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">关于搭建blog时踩过的坑</h1>
+        <h1 class="title">Python基础之数据类型</h1>
         <div class="stuff">
-            <span>八月 19, 2021</span>
+            <span>九月 16, 2021</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%90%AD%E5%BB%BAblog/" rel="tag">搭建blog</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Python%E5%9F%BA%E7%A1%80/" rel="tag">Python基础</a></li></ul>
 
 
         </div>
         
         <div class="content markdown">
-            <h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git</a></li>
-<li><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">node.js</a></li>
+            <h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><ul>
+<li>Python使用缩进来组织代码块，确保不混用Tab和空格</li>
+<li>Python程序是大小写敏感的</li>
+<li>Python是动态语言</li>
+<li>变量本身类型不固定的语言称之为动态语言，与之相对的静态语言，静态语言在定义变量时必须指定变量类型</li>
 </ul>
-<h2 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h2><h3 id="git："><a href="#git：" class="headerlink" title="git："></a>git：</h3><ol>
-<li>下载并安装好</li>
-<li>了解关于git的基本概念和指令，推荐这个：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">有关git的教程</a><br>git作为github使用的重要工具，可单独进行深入学习，了解git（目前世界上最先进的分布式版本控制系统）有助于在github进行项目开发</li>
-</ol>
-<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><ol>
-<li><p>下载并安装好</p>
-</li>
-<li><p>坑：</p>
-<ol>
-<li>当使用 node -v、npm -v 指令发现没问题时，软件其实已经就已经安装好了，但当我在修改全局依赖包下载路径后，并试图使用 npm install @vue/cli -g 指令测试修改结果时，总会出现许多奇奇怪怪的安装失败错误<ul>
-<li>提示没有权限</li>
-<li>提示路径信息错误</li>
+<h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><ol>
+<li>python可以处理任意大小的整数</li>
+<li>可以使用十六进制来方便的表示二进制<ul>
+<li>0x前缀和0-9，a-f表示</li>
 </ul>
 </li>
-</ol>
-<p> 解决方法：无权限则以管理员身份启动cmd，路径错误则删除用户目录下 .npmrc 文件</p>
+<li>10_000_000与10000000是完全一样的</li>
+<li>整数运算永远是精准的</li>
+<li>在Python中有两种除法<ul>
+<li>一种除法是/，计算结果是浮点数</li>
+<li>还有一种是//，称为地板除，计算结果是整数</li>
+</ul>
 </li>
+<li>取余，%</li>
+</ol>
+<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><ol>
+<li>按照科学计数法表示时，一个浮点数的小数点位置是可变的<ul>
+<li>1.23e9==12.3e8</li>
+</ul>
+</li>
+<li>用科学计数法表示时，把10用e代替</li>
+</ol>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ol>
+<li>表示文本时，可以使用’    ‘，或”    “</li>
+<li>转义字符\<ul>
+<li>\n表示换行，\t表示制表，\表示\</li>
+<li>为了简化，Python允许使用r’    ‘表示’ ‘内部的字符串默认不转义</li>
+</ul>
+</li>
+<li>表示多行内容’’’…’’’<ul>
+<li>例如：print(‘’’line1…line2…line3’’’)</li>
+</ul>
+</li>
+</ol>
+<h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><ol>
+<li>取值True和False，运算and，or，not</li>
+</ol>
+<h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><ol>
+<li>空值是Python中一个特殊的值，用None表示，</li>
+</ol>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ol>
+<li>变量名必须是大小写英文，数字和_的组合，且不能用数字开头</li>
+</ol>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ol>
+<li>在Python中，通常用全部大写的变量名表示常量，如PI</li>
+<li>但事实上PI仍是一个变量</li>
+</ol>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
+<li>Python支持多种数据类型，在计算机内部，可以把任何数据都看成一个“对象”，而变量就是在程序中用来指向这些数据对象的，对变量赋值就是把数据和变量给关联起来</li>
 </ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="https://link.hhtjim.com/163/33735993.mp3">
             </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='https://link.hhtjim.com/163/490182455.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='https://link.hhtjim.com/163/1297333740.mp3'></li>
-                        
-                    
-                        
-                            <li title='2' data-url='https://link.hhtjim.com/163/22706980.mp3'></li>
-                        
-                    
-                </ul>
             
         </div>
         
