@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-09-19T09:23:42.805Z</updated>
+  <updated>2021-09-19T09:58:17.702Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="https://likunlin.top/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/"/>
     <id>https://likunlin.top/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</id>
     <published>2021-09-19T09:23:40.000Z</published>
-    <updated>2021-09-19T09:23:42.805Z</updated>
+    <updated>2021-09-19T09:58:17.702Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;"><iframe         style="position: absolute;         width: 100%;         height: 100%;         left: 0; top: 0;"         src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0"         frameborder="no"        allowfullscreen="true"         scrolling="no"></iframe></div>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li>关于<a href="https://github.com/docmirror/dev-sidecar">DevSidecar</a>：开发者边车，命名取自service-mesh的service-sidecar，意为为开发者打辅助的边车工具<br>通过本地代理的方式将https请求代理到一些国内的加速通道上</li><li>ps：不得不说大佬的加密手法着实nb，有自信的可以忽略以下视频，自己尝试通过软件中的提示自行找出，<del>反正我是想不到＞﹏＜</del></li><li>开启了增强模式就可以愉快的通过goole访问各种技术网站了，请自行使用，切勿传播</li></ul><h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;"><iframe         style="position: absolute;         width: 100%;         height: 100%;         left: 0; top: 0;"         src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0"         frameborder="no"        allowfullscreen="true"         scrolling="no"></iframe></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;DevSidecar开启增强模式&quot;&gt;&lt;a href=&quot;#DevSidecar开启增强模式&quot; class=&quot;headerlink&quot; title=&quot;DevSidecar开启增强模式&quot;&gt;&lt;/a&gt;DevSidecar开启增强模式&lt;/h2&gt;&lt;div style=&quot;posit</summary>
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;关于&lt;a href=&quot;https://github.com/docmirror/dev-sidecar&quot;&gt;DevSidecar&lt;</summary>
       
     
     
