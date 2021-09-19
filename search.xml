@@ -96,20 +96,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Comment test</title>
-    <url>/2021/08/19/Comment-test/</url>
-    <content><![CDATA[<h2 id="看看可以评论吗"><a href="#看看可以评论吗" class="headerlink" title="看看可以评论吗"></a>看看可以评论吗</h2><br>
-千里之行，始于足下。——老子
-]]></content>
-      <categories>
-        <category>测试</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python基础之数据类型</title>
     <url>/2021/08/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><ul>
@@ -298,6 +284,28 @@
       </categories>
       <tags>
         <tag>页面元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DevSidecar开启增强模式</title>
+    <url>/2021/08/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;">
+<iframe 
+        style="position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        left: 0; top: 0;" 
+        src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0" 
+        frameborder="no"
+        allowfullscreen="true" 
+        scrolling="no">
+</iframe>
+</div>]]></content>
+      <categories>
+        <category>浏览器增强</category>
+      </categories>
+      <tags>
+        <tag>vpn</tag>
       </tags>
   </entry>
 </search>
