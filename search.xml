@@ -96,6 +96,186 @@
       </tags>
   </entry>
   <entry>
+    <title>Python基础之高级特性</title>
+    <url>/2021/09/18/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="Python的高级特性"><a href="#Python的高级特性" class="headerlink" title="Python的高级特性"></a>Python的高级特性</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul>
+<li>在list，tuple，字符串中截取一段</li>
+<li>截取范围含头不含为，因为索引下标是从0开始的</li>
+</ul>
+<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><ul>
+<li>在python中只要是可迭代的对象，无论有无下标，都能迭代</li>
+<li>如list，tuple，dict</li>
+<li>判断一个对象是否为可迭代对象<ul>
+<li>isinstance(判断对象, Iterable)</li>
+<li>返回一个布尔值</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><ul>
+<li>用来创建list的生成式<ul>
+<li>如[x*x for x in range(1, 11)]</li>
+<li>把要生成的元素x*x的表达式写在for循环前面</li>
+</ul>
+</li>
+<li>使用if…else语句<ul>
+<li>如[x for x in range(1, 11) if x % 2 == 0]</li>
+<li>但不能在if后加上else</li>
+<li>如果if语句写在for前面，则需要加上else</li>
+<li>如[x if x % 2 == 0 else -x for x in range(1, 11)]</li>
+<li>因为for前面必须是一个表达式，且能计算出结果</li>
+</ul>
+</li>
+</ul>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><ul>
+<li>生成器generator，能一边循环一边计算<ul>
+<li>如(x*x for x in range(10))</li>
+</ul>
+</li>
+<li>与列表生成式的差别仅在于最外层的 [] 和 ()</li>
+<li>打印一个generator的方式<ul>
+<li>next()函数</li>
+<li>但通常使用for循环，因为generator是一个可迭代对象</li>
+</ul>
+</li>
+<li>关键字yield，如果一个函数定义中包括yield关键字，那么这个函数就是一个generator</li>
+<li>普通函数是顺序执行，遇到return语句或最后一行函数语句就返回，而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，下次重新重新从yield语句执行</li>
+</ul>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li>可以直接使用for循环的数据类型有<ul>
+<li>集合数据类型，如list，tuple，dict，set，str，等</li>
+<li>generator，包括生成器和带yield的generator function</li>
+</ul>
+</li>
+<li>这些可以直接作用于for循环的对象统称为可迭代对象：Iterable</li>
+<li>可以使用isinstance()判断一个对象是否是Iterable对象</li>
+<li>而可以被next()函数调用不断返回下一个值的对象称为迭代器：Iterator</li>
+<li>可以使用isinstance()判断一个对象是否是Iterator对象</li>
+<li>生成器都是Iterator</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>高级特性</category>
+      </categories>
+      <tags>
+        <tag>Python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DevSidecar开启增强模式</title>
+    <url>/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li>关于<a href="https://github.com/docmirror/dev-sidecar">DevSidecar</a>：开发者边车，命名取自service-mesh的service-sidecar，意为为开发者打辅助的边车工具<br>通过本地代理的方式将https请求代理到一些国内的加速通道上</li>
+<li>ps：不得不说大佬的加密手法着实nb，有自信的可以忽略以下视频，自己尝试通过软件中的提示自行找出，<del>反正我是想不到＞﹏＜</del></li>
+<li>开启了增强模式就可以愉快的通过goole访问各种技术网站了，请自行使用，切勿传播</li>
+</ul>
+<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;">
+<iframe 
+        style="position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        left: 0; top: 0;" 
+        src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0" 
+        frameborder="no"
+        allowfullscreen="true" 
+        scrolling="no">
+</iframe>
+</div>]]></content>
+      <categories>
+        <category>浏览器增强</category>
+      </categories>
+      <tags>
+        <tag>vpn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python基础之高阶函数</title>
+    <url>/2021/09/21/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h1><h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul>
+<li>变量可以指向函数</li>
+<li>而函数名也是变量<ul>
+<li>a = abs(-10)</li>
+<li>print(a)</li>
+<li>10</li>
+<li>abs = 5</li>
+<li>print(abs)</li>
+<li>5</li>
+</ul>
+</li>
+<li>对于abs()这个函数，可以把函数名abs看成变量，它指向一个可以计算绝对值的函数</li>
+<li>而当将abs指向5后，就无法通过abs()调用函数，因为它已经不指向求绝对值函数，而是指向一个整数5，而在实际编程中绝对不能这么写！</li>
+<li>传入函数</li>
+<li>当一个函数接受另一个函数作为参数时，这种函数就称为高阶函数<ul>
+<li>def add(x, y, f):<ul>
+<li>return f(x) + f(y)</li>
+</ul>
+</li>
+<li>print(add(-5, 6, abs))</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="map和reduce"><a href="#map和reduce" class="headerlink" title="map和reduce"></a>map和reduce</h3><ul>
+<li>Python内建了map()和reduce()函数</li>
+<li>map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterable返回<ul>
+<li>def f(x):<ul>
+<li>return x * x</li>
+</ul>
+</li>
+<li>r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])</li>
+<li>print(list(r))</li>
+</ul>
+</li>
+<li>reduce()函数接收两个参数，一个是函数，一个是Iterable，reduce把结果继续和序列的下一个元素做累积计算<ul>
+<li>reduce(f, [x1, x2, x3, x4,]) = f(f(f(x1, x2), x3), x4)</li>
+</ul>
+</li>
+<li>使用reduce要在程序前导入<ul>
+<li>from functools import reduce</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><ul>
+<li>Python内建的filter()函数用于过滤序列</li>
+<li>filter()和map()相似也是接收一个函数和一个序列，不过filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False来决定保留还是丢弃该元素<ul>
+<li>def is_odd(n):<ul>
+<li>return n % 2 == 1</li>
+</ul>
+</li>
+<li>list(filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9]))</li>
+</ul>
+</li>
+<li>注意filter()函数返回的是一个Iterator，也就是一个惰性序列，所有要获得filter()完成计算的所有结果，需要用list()函数</li>
+</ul>
+<hr>
+<h3 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h3><ul>
+<li>Python内置的sorted()函数可以对list进行排序<ul>
+<li>sorted([36, 5, -12, 9, -21])</li>
+<li>[-21, -12, 5, 9, 36]</li>
+</ul>
+</li>
+<li>sorted()函数也是一个高阶函数，可以接收一个key函数来实现自定义的排序<ul>
+<li>sorted([36, 5, -12, 9, -21], key=abs)</li>
+<li>[5, 9, -12, -21, 36]</li>
+</ul>
+</li>
+<li>sorted()函数的第三个参数，可以决定是否反转结果<ul>
+<li>sorted([‘bob’, ‘about’, ‘Zoo’, ‘Credit’], key=str.lower, reverse=True)</li>
+<li>[‘Zoo’, ‘Credit’, ‘bob’, ‘about’]</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>高阶函数</category>
+      </categories>
+      <tags>
+        <tag>Python基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python基础之数据类型</title>
     <url>/2021/09/16/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><ul>
@@ -164,72 +344,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python基础之高级特性</title>
-    <url>/2021/09/18/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
-    <content><![CDATA[<h1 id="Python的高级特性"><a href="#Python的高级特性" class="headerlink" title="Python的高级特性"></a>Python的高级特性</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul>
-<li>在list，tuple，字符串中截取一段</li>
-<li>截取范围含头不含为，因为索引下标是从0开始的</li>
-</ul>
-<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><ul>
-<li>在python中只要是可迭代的对象，无论有无下标，都能迭代</li>
-<li>如list，tuple，dict</li>
-<li>判断一个对象是否为可迭代对象<ul>
-<li>isinstance(判断对象, Iterable)</li>
-<li>返回一个布尔值</li>
-</ul>
-</li>
-</ul>
-<h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><ul>
-<li>用来创建list的生成式<ul>
-<li>如[x*x for x in range(1, 11)]</li>
-<li>把要生成的元素x*x的表达式写在for循环前面</li>
-</ul>
-</li>
-<li>使用if…else语句<ul>
-<li>如[x for x in range(1, 11) if x % 2 == 0]</li>
-<li>但不能在if后加上else</li>
-<li>如果if语句写在for前面，则需要加上else</li>
-<li>如[x if x % 2 == 0 else -x for x in range(1, 11)]</li>
-<li>因为for前面必须是一个表达式，且能计算出结果</li>
-</ul>
-</li>
-</ul>
-<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><ul>
-<li>生成器generator，能一边循环一边计算<ul>
-<li>如(x*x for x in range(10))</li>
-</ul>
-</li>
-<li>与列表生成式的差别仅在于最外层的 [] 和 ()</li>
-<li>打印一个generator的方式<ul>
-<li>next()函数</li>
-<li>但通常使用for循环，因为generator是一个可迭代对象</li>
-</ul>
-</li>
-<li>关键字yield，如果一个函数定义中包括yield关键字，那么这个函数就是一个generator</li>
-<li>普通函数是顺序执行，遇到return语句或最后一行函数语句就返回，而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，下次重新重新从yield语句执行</li>
-</ul>
-<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
-<li>可以直接使用for循环的数据类型有<ul>
-<li>集合数据类型，如list，tuple，dict，set，str，等</li>
-<li>generator，包括生成器和带yield的generator function</li>
-</ul>
-</li>
-<li>这些可以直接作用于for循环的对象统称为可迭代对象：Iterable</li>
-<li>可以使用isinstance()判断一个对象是否是Iterable对象</li>
-<li>而可以被next()函数调用不断返回下一个值的对象称为迭代器：Iterator</li>
-<li>可以使用isinstance()判断一个对象是否是Iterator对象</li>
-<li>生成器都是Iterator</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>高级特性</category>
-      </categories>
-      <tags>
-        <tag>Python基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于搭建blog时踩过的坑</title>
     <url>/2021/09/15/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BAblog%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
     <content><![CDATA[<h2 id="搭建工具："><a href="#搭建工具：" class="headerlink" title="搭建工具："></a>搭建工具：</h2><ul>
@@ -284,33 +398,6 @@
       </categories>
       <tags>
         <tag>页面元素</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DevSidecar开启增强模式</title>
-    <url>/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>关于<a href="https://github.com/docmirror/dev-sidecar">DevSidecar</a>：开发者边车，命名取自service-mesh的service-sidecar，意为为开发者打辅助的边车工具<br>通过本地代理的方式将https请求代理到一些国内的加速通道上</li>
-<li>ps：不得不说大佬的加密手法着实nb，有自信的可以忽略以下视频，自己尝试通过软件中的提示自行找出，<del>反正我是想不到＞﹏＜</del></li>
-<li>开启了增强模式就可以愉快的通过goole访问各种技术网站了，请自行使用，切勿传播</li>
-</ul>
-<h2 id="DevSidecar开启增强模式"><a href="#DevSidecar开启增强模式" class="headerlink" title="DevSidecar开启增强模式"></a>DevSidecar开启增强模式</h2><div style="position: relative; padding: 30% 45%;">
-<iframe 
-        style="position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        left: 0; top: 0;" 
-        src="https://player.bilibili.com/player.html?aid=503646988&bvid=BV1Yg411g7u8&cid=369965625&page=1&as_wide=1&high_quality=1&danmaku=0" 
-        frameborder="no"
-        allowfullscreen="true" 
-        scrolling="no">
-</iframe>
-</div>]]></content>
-      <categories>
-        <category>浏览器增强</category>
-      </categories>
-      <tags>
-        <tag>vpn</tag>
       </tags>
   </entry>
 </search>

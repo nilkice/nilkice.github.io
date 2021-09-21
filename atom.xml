@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-09-19T09:58:17.702Z</updated>
+  <updated>2021-09-21T08:15:09.999Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python基础之高阶函数</title>
+    <link href="https://likunlin.top/2021/09/21/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/"/>
+    <id>https://likunlin.top/2021/09/21/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/</id>
+    <published>2021-09-21T08:07:47.000Z</published>
+    <updated>2021-09-21T08:15:09.999Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h1><h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul><li>变量可以指向函数</li><li>而函数名也是变量<ul><li>a = abs(-10)</li><li>print(a)</li><li>10</li><li>abs = 5</li><li>print(abs)</li><li>5</li></ul></li><li>对于abs()这个函数，可以把函数名abs看成变量，它指向一个可以计算绝对值的函数</li><li>而当将abs指向5后，就无法通过abs()调用函数，因为它已经不指向求绝对值函数，而是指向一个整数5，而在实际编程中绝对不能这么写！</li><li>传入函数</li><li>当一个函数接受另一个函数作为参数时，这种函数就称为高阶函数<ul><li>def add(x, y, f):<ul><li>return f(x) + f(y)</li></ul></li><li>print(add(-5, 6, abs))</li></ul></li></ul><hr><h3 id="map和reduce"><a href="#map和reduce" class="headerlink" title="map和reduce"></a>map和reduce</h3><ul><li>Python内建了map()和reduce()函数</li><li>map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterable返回<ul><li>def f(x):<ul><li>return x * x</li></ul></li><li>r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])</li><li>print(list(r))</li></ul></li><li>reduce()函数接收两个参数，一个是函数，一个是Iterable，reduce把结果继续和序列的下一个元素做累积计算<ul><li>reduce(f, [x1, x2, x3, x4,]) = f(f(f(x1, x2), x3), x4)</li></ul></li><li>使用reduce要在程序前导入<ul><li>from functools import reduce</li></ul></li></ul><hr><h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><ul><li>Python内建的filter()函数用于过滤序列</li><li>filter()和map()相似也是接收一个函数和一个序列，不过filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False来决定保留还是丢弃该元素<ul><li>def is_odd(n):<ul><li>return n % 2 == 1</li></ul></li><li>list(filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9]))</li></ul></li><li>注意filter()函数返回的是一个Iterator，也就是一个惰性序列，所有要获得filter()完成计算的所有结果，需要用list()函数</li></ul><hr><h3 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h3><ul><li>Python内置的sorted()函数可以对list进行排序<ul><li>sorted([36, 5, -12, 9, -21])</li><li>[-21, -12, 5, 9, 36]</li></ul></li><li>sorted()函数也是一个高阶函数，可以接收一个key函数来实现自定义的排序<ul><li>sorted([36, 5, -12, 9, -21], key=abs)</li><li>[5, 9, -12, -21, 36]</li></ul></li><li>sorted()函数的第三个参数，可以决定是否反转结果<ul><li>sorted([‘bob’, ‘about’, ‘Zoo’, ‘Credit’], key=str.lower, reverse=True)</li><li>[‘Zoo’, ‘Credit’, ‘bob’, ‘about’]</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;函数式编程&quot;&gt;&lt;a href=&quot;#函数式编程&quot; class=&quot;headerlink&quot; title=&quot;函数式编程&quot;&gt;&lt;/a&gt;函数式编程&lt;/h1&gt;&lt;h2 id=&quot;高阶函数&quot;&gt;&lt;a href=&quot;#高阶函数&quot; class=&quot;headerlink&quot; title=&quot;高阶函数&quot;</summary>
+      
+    
+    
+    
+    <category term="Python" scheme="https://likunlin.top/categories/Python/"/>
+    
+    <category term="高阶函数" scheme="https://likunlin.top/categories/Python/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/"/>
+    
+    
+    <category term="Python基础" scheme="https://likunlin.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>DevSidecar开启增强模式</title>
