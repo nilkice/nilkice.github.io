@@ -6,7 +6,7 @@
   <link href="https://likunlin.top/atom.xml" rel="self"/>
   
   <link href="https://likunlin.top/"/>
-  <updated>2021-09-21T08:15:09.999Z</updated>
+  <updated>2021-10-06T09:29:08.293Z</updated>
   <id>https://likunlin.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode刷题必备知识</title>
+    <link href="https://likunlin.top/2021/10/06/Leetcode%E5%88%B7%E9%A2%98%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
+    <id>https://likunlin.top/2021/10/06/Leetcode%E5%88%B7%E9%A2%98%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/</id>
+    <published>2021-10-06T08:58:43.000Z</published>
+    <updated>2021-10-06T09:29:08.293Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul><li>这是一个会持续更新的文章，主要内容为在刷Leetcode时遇到的各种Java基础知识点</li><li>建议ctrl+F搜索查看</li></ul><hr><h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><ul><li>HashMap 是一个散列表，它存储的内容是键值对 (key-value) 映射</li><li>HashMap 是无序的，即不会记录插入的顺序<ul><li>Map&lt;String, String&gt;map = new HashMap();</li></ul></li><li>添加键值对可以使用 put() 方法<ul><li>map.put(1, “Google”);</li></ul></li><li>使用 get(key) 方法来获取 key 对应的 value<ul><li>map.get(1)</li></ul></li><li>使用 remove(key) 方法来删除key对应的键值对 (key-value)<ul><li>map.remove(1)</li><li>删除所有键值对 (key-value) 可以使用 clear 方法<ul><li>map.clear();</li></ul></li></ul></li><li>计算 HashMap 中的元素数量可以使用 size() 方法<ul><li>map.size();</li></ul></li><li>迭代 HashMap 可以使用 for-each <ul><li>获取键值对 (key-value)<ul><li>for(Integer i : map){}</li></ul></li></ul></li><li>检查 hashMap 中是否存在指定的 key 对应的映射关系<ul><li>map.containsKey();</li></ul></li></ul><h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><ul><li>父类的引用指向子类的对象</li></ul><h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><ul><li>replaceAll() 方法使用给定的参数 replacement 替换字符串所有匹配给定的正则表达式的子字符串。<ul><li>public String replaceAll(String regex, String replacement)</li></ul></li><li>字符串格式化方法<ul><li>String.format(“格式+占位符”, string1, string2…);</li></ul></li><li>StringBuilder类<ul><li>用于解决字符串频繁修改带来的内存消耗</li><li>当有频繁修改字符串内容这样的操作时，首选使用</li><li>StringBuilder不支持并发操作，线性不安全的，不适合多线程中使用</li></ul></li><li>创建<ul><li>StringBuilder builder = new StringBuilder();</li><li>StringBuilder builder = new StringBuilder(“helloworld”);</li></ul></li><li>追加字符串<ul><li>builder.append(String str);</li></ul></li><li>插入字符串<ul><li>builder.insert(int dstOffset,String s);</li></ul></li><li>删除字符串<ul><li>builder.delete(int start,int end);</li></ul></li><li>替换字符串<ul><li>builder.replace(int start,int end,String str);</li></ul></li><li>字符串反转<ul><li>builder.reverse();</li></ul></li><li>将StringBuilder类转换为String<ul><li>builder.toString();</li></ul></li></ul><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><ul><li>基本类型<ul><li>byte：byte 数据类型是8位</li><li>short：short 数据类型是 16 位</li><li>int：int 数据类型是32位</li><li>long：long 数据类型是 64 位</li><li>float：float 数据类型是单精度、32位</li><li>double：double 数据类型是双精度、64 位</li><li>boolean：boolean数据类型表示一位的信息</li><li>char：char 类型是一个单一的 16 位 Unicode 字符</li></ul></li><li>对象类型<ul><li>Byte</li><li>Short</li><li>Integer</li><li>Long</li><li>Float</li><li>Double</li><li>Boolean</li><li>Character </li></ul></li></ul><h1 id="Math库"><a href="#Math库" class="headerlink" title="Math库"></a>Math库</h1><ul><li>Math.pow(x, y)<ul><li>pow() 方法可以返回 x 的 y 次幂的值</li></ul></li></ul><h1 id="迭代器-Iterator"><a href="#迭代器-Iterator" class="headerlink" title="迭代器(Iterator)"></a>迭代器(Iterator)</h1><ul><li>是一种用于访问集合的方法，可用于迭代 ArrayList 和 HashSet 等集合</li><li>Iterator 是 Java 迭代器的简单实现</li><li>导包<ul><li>import java.util.Iterator;</li></ul></li><li>获取迭代器<ul><li>先要有迭代对象</li><li>ArrayList<String> sites = new ArrayList<String>();</li><li>Iterator<String> iter = sites.iterator();</li></ul></li><li>迭代器常用方法<ul><li>返回迭代器的下一个元素<ul><li>iter.next();</li></ul></li><li>检测集合中是否还有元素<ul><li>iter.hasNext()</li></ul></li><li>将迭代器返回的元素删除<ul><li>iter.remove();</li></ul></li></ul></li></ul><h1 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h1><ul><li>特点：不能存储相同的元素，是一个无序集合(输出顺序与放入顺序无关)</li><li>因为是一个抽象的接口，所以不能直接实例化一个set对象<ul><li>如：错误示范(Set s = new Set())</li></ul></li><li>该接口主要继承于Collection接口，所以有Collection的一些常见方法<ul><li>向集合添加元素：add()</li><li>判断集合是否包含某一个元素：contains()</li><li>判断集合是否为空：isEmpty()</li><li>递归集合，返回一个Iterator()对象：iterator()</li><li>返回集合大小：size()</li></ul></li><li>Set接口常用的两大实现<ul><li>HashSet<ul><li>哈希表结构</li><li>元素无序</li></ul></li><li>TreeSet<ul><li>红黑树结构</li><li>会将元素默认排序（升序）</li></ul></li></ul></li></ul><h1 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h1><ul><li>特点：可以存储相同的元素，是一个有序集合(输出顺序与放入顺序有关)</li><li>List是一个接口，继承于Collection接口</li><li>List接口常用的两大实现<ul><li>ArrayList<ul><li>是用数组实现的，可认为是一个可改变大小的动态数组</li><li>适用于查找</li></ul></li><li>LinkedList<ul><li>是用双向链表实现的</li><li>适用于增删</li></ul></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;这是一个会持续更新的文章，主要内容为在刷Leetcode时遇到的各种Java基础知识点&lt;/li&gt;
+&lt;li&gt;建议ctrl+F搜索查</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://likunlin.top/categories/Java/"/>
+    
+    <category term="算法" scheme="https://likunlin.top/categories/Java/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Leetcode" scheme="https://likunlin.top/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Python基础之高阶函数</title>
