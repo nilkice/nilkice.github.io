@@ -125,6 +125,32 @@
   </entry>
   
   <entry>
+    <title>Python基础之继承与多态</title>
+    <link href="https://likunlin.top/2021/09/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/"/>
+    <id>https://likunlin.top/2021/09/19/Python%E5%9F%BA%E7%A1%80%E4%B9%8B%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/</id>
+    <published>2021-09-19T09:34:47.000Z</published>
+    <updated>2021-10-13T10:51:27.683Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h2><ul><li>在OOP程序设计中，当我们定义一个class时，可以从某个现有的class继承，新的class称为子类，而被继承的class称为基类、父类或超类</li><li>如，编写一个动物类Animal，拥有一个run方法<ul><li>class Animal(object):<ul><li>def run(self):<ul><li>print(‘The Animal is running…’)</li></ul></li></ul></li></ul></li><li>编写Dog和Cat类，继承于Animal，但什么都不写<ul><li>class Dog(Animal):<ul><li>pass</li></ul></li><li>class Cat(Animal):<ul><li>pass</li></ul></li></ul></li><li>对于Animal来说，Dog是它的子类。对于Dog说，Animal是它的父类</li><li>若父类拥有一些方法，则继承时子类自动拥有<ul><li>dog = Dog()</li><li>dog.run()</li><li>cat = Cat()</li><li>cat.run()</li></ul></li><li>子类也可以重写父类的方法，或增加自己的方法，如Dog类<ul><li>class Dog(Animal):<ul><li>def run(self):<ul><li>print(‘The Dog is running…’)</li></ul></li><li>def eat(self):<ul><li>print(‘The Dog eating meat…’)</li></ul></li></ul></li></ul></li><li>若子类Dog重写了父类Animal的run()方法，调用run()方法时，执行子类的run()方法<ul><li>dog.run()</li></ul></li><li>这种子类方法覆盖父类方法，称之为 多态</li><li>判断dog的数据类型<ul><li>print(isinstance(dog, Dog))</li><li>print(isinstance(dog, Animal))</li></ul></li><li>其结果均为true，表示dog不仅是Dog类型，还是Animal类型</li><li>要理解多态，在定义一个函数<ul><li>def run_twice(animal):<ul><li>animal.run()</li><li>animal.run()</li></ul></li></ul></li><li>当增加一个Animal的子类时，不需要对run_twice()做任何修改，就可以使用run_twice()方法，而且若子类重写了run()方法，就可以调用子类的run()方法，这就是多态的好处。</li><li>这体现了著名的开闭原则<ul><li>对扩展开放：允许增加Animal子类</li><li>对修改封闭：不需要修改依赖于Animal类型的函数方法</li></ul></li><li>Python为动态语言，这意味着run_twice()函数中的参数animal，并不严格限制为Animal类，实际上只要传入的实例中有run()方法就行<ul><li>class Robot(object):<ul><li>def run(self):<ul><li>print(‘Robot like a Animal running…’)</li></ul></li></ul></li><li>run_twice(Robot())</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;面向对象编程&quot;&gt;&lt;a href=&quot;#面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;面向对象编程&quot;&gt;&lt;/a&gt;面向对象编程&lt;/h1&gt;&lt;h2 id=&quot;继承和多态&quot;&gt;&lt;a href=&quot;#继承和多态&quot; class=&quot;headerlink&quot; title=</summary>
+      
+    
+    
+    
+    <category term="Python" scheme="https://likunlin.top/categories/Python/"/>
+    
+    <category term="面向对象编程" scheme="https://likunlin.top/categories/Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python基础" scheme="https://likunlin.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>DevSidecar开启增强模式</title>
     <link href="https://likunlin.top/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/"/>
     <id>https://likunlin.top/2021/09/19/DevSidecar%E5%BC%80%E5%90%AF%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F/</id>
