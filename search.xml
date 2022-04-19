@@ -850,4 +850,123 @@
         <tag>Python基础</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Servlet入门</title>
+    <url>/2022/04/18/Servlet%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="Servlet入门"><a href="#Servlet入门" class="headerlink" title="Servlet入门"></a>Servlet入门</h2><ul>
+<li>实现一个最简单的Servlet</li>
+</ul>
+<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// WebServlet注解表示这是一个Servlet，并映射到地址/:</span><br><span class="line">@WebServlet(urlPatterns = &quot;/&quot;)</span><br><span class="line">public class HelloServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp)</span><br><span class="line">            throws ServletException, IOException &#123;</span><br><span class="line">        // 设置响应类型:</span><br><span class="line">        resp.setContentType(&quot;text/html&quot;);</span><br><span class="line">        // 获取输出流:</span><br><span class="line">        PrintWriter pw = resp.getWriter();</span><br><span class="line">        // 写入响应:</span><br><span class="line">        pw.write(&quot;&lt;h1&gt;Hello, world!&lt;/h1&gt;&quot;);</span><br><span class="line">        // 最后不要忘记flush强制输出:</span><br><span class="line">        pw.flush();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="依赖需求"><a href="#依赖需求" class="headerlink" title="依赖需求"></a>依赖需求</h2><ul>
+<li>应用继承的HttpServlet需要依赖Servlet API，需要在Maven中引入相关的jar包，在pom.xml中添加<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;4.0.1&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt; </span><br><span class="line"></span><br><span class="line">&lt;packaging&gt;war&lt;/packaging&gt;	</span><br></pre></td></tr></table></figure></li>
+<li><packaging>标签中指定为war，表示该程序为Java Web Application Archive</li>
+<li>我们还需要在工程目录下创建一个web.xml描述文件，放到src/main/webapp/WEB-INF目录下（固定目录结构，不要修改路径，注意大小写）</li>
+<li>Web应用程序与一般Java程序不同，必须先启动Web服务器，再由服务器加载编写的HelloServlet，让HelloServlet处理浏览器发送的请求，如tomcat<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在IDEA中配置tomcat</span><br><span class="line">-Run/Debug Configuratons</span><br><span class="line">	-Application</span><br><span class="line">		-tomcat Local</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="程序执行流程"><a href="#程序执行流程" class="headerlink" title="程序执行流程"></a>程序执行流程</h2><ol>
+<li>启动tomcat服务器，也就是启动Java虚拟机，执行tomcat的main()方法</li>
+<li>tomcat加载.war文件，并创建一个HelloServlet实例</li>
+<li>浏览器对服务器发出请求</li>
+<li>HelloServlet实例处理请求并响应</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Servlet开发</title>
+    <url>/2022/04/18/Servlet%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="一个完整的Web应用程序的开发流程"><a href="#一个完整的Web应用程序的开发流程" class="headerlink" title="一个完整的Web应用程序的开发流程"></a>一个完整的Web应用程序的开发流程</h2><ol>
+<li>编写Servlet</li>
+<li>打包为war文件</li>
+<li>复制到Tomcat的webapps目录下<ul>
+<li>也就是在IDEA中配置tomcat插件</li>
+</ul>
+</li>
+<li>启动tomcat</li>
+</ol>
+<h2 id="tomcat启动流程"><a href="#tomcat启动流程" class="headerlink" title="tomcat启动流程"></a>tomcat启动流程</h2><ol>
+<li>启动JVM并执行tomcat的main()方法</li>
+<li>加载war并初始化Servlet</li>
+<li>正常服务</li>
+</ol>
+<h2 id="在IDEA中用自己编写的main-方法启动tomcat"><a href="#在IDEA中用自己编写的main-方法启动tomcat" class="headerlink" title="在IDEA中用自己编写的main()方法启动tomcat"></a>在IDEA中用自己编写的main()方法启动tomcat</h2><ul>
+<li><p>编写pom.xml，引入依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;tomcat-embed-core&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;tomcat.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;tomcat.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>编写Servlet</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@WebServlet(urlPatterns = &quot;/&quot;)</span><br><span class="line">public class HelloServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span><br><span class="line">        resp.setContentType(&quot;text/html&quot;);</span><br><span class="line">        String name = req.getParameter(&quot;name&quot;);</span><br><span class="line">        if (name == null) &#123;</span><br><span class="line">            name = &quot;world&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        PrintWriter pw = resp.getWriter();</span><br><span class="line">        pw.write(&quot;&lt;h1&gt;Hello, &quot; + name + &quot;!&lt;/h1&gt;&quot;);</span><br><span class="line">        pw.flush();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>编写main()方法，启动tomcat服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        // 启动Tomcat:</span><br><span class="line">        Tomcat tomcat = new Tomcat();</span><br><span class="line">        tomcat.setPort(Integer.getInteger(&quot;port&quot;, 8080));</span><br><span class="line">        tomcat.getConnector();</span><br><span class="line">        // 创建webapp:</span><br><span class="line">        Context ctx = tomcat.addWebapp(&quot;&quot;, new File(&quot;src/main/webapp&quot;).getAbsolutePath());</span><br><span class="line">        WebResourceRoot resources = new StandardRoot(ctx);</span><br><span class="line">        resources.addPreResources(</span><br><span class="line">                new DirResourceSet(resources, &quot;/WEB-INF/classes&quot;, new File(&quot;target/classes&quot;).getAbsolutePath(), &quot;/&quot;));</span><br><span class="line">        ctx.setResources(resources);</span><br><span class="line">        tomcat.start();</span><br><span class="line">        tomcat.getServer().await();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web 基础</title>
+    <url>/2022/04/18/Web-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="访问网站，使用App"><a href="#访问网站，使用App" class="headerlink" title="访问网站，使用App"></a>访问网站，使用App</h2><ul>
+<li>基于Web的Browser/Server模式，简称B/S架构</li>
+<li>客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端</li>
+</ul>
+<h2 id="对于Browser来说，请求页面的流程如下"><a href="#对于Browser来说，请求页面的流程如下" class="headerlink" title="对于Browser来说，请求页面的流程如下"></a>对于Browser来说，请求页面的流程如下</h2><ol>
+<li>与服务器建立TCP连接</li>
+<li>发送HTTP请求</li>
+<li>收取HTTP响应，显示网页</li>
+</ol>
+<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package wjs;</span><br><span class="line"></span><br><span class="line">import java.io.*;</span><br><span class="line">import java.net.ServerSocket;</span><br><span class="line">import java.net.Socket;</span><br><span class="line">import java.nio.charset.StandardCharsets;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author lkl</span><br><span class="line"> * @create 2022-04-16 10:33</span><br><span class="line"> */</span><br><span class="line">public class Server &#123;</span><br><span class="line">    /*</span><br><span class="line">        编写HTTP Server:</span><br><span class="line">        一个HTTP Server本质上是一个TCP服务器</span><br><span class="line">     */</span><br><span class="line">    public static void main(String[] args) throws IOException &#123;</span><br><span class="line">        //监听指定端口</span><br><span class="line">        ServerSocket ss = new ServerSocket(8080);</span><br><span class="line">        System.out.println(&quot;server is running...&quot;);</span><br><span class="line">        for (;;) &#123;</span><br><span class="line">            Socket sock = ss.accept();</span><br><span class="line">            System.out.println(&quot;connected from&quot; + sock.getRemoteSocketAddress());</span><br><span class="line">            Thread t = new Handler(sock);</span><br><span class="line">            t.start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Handler extends Thread &#123;</span><br><span class="line">    Socket sock;</span><br><span class="line"></span><br><span class="line">    public Handler(Socket sock) &#123;</span><br><span class="line">        this.sock = sock;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void run() &#123;</span><br><span class="line">        try (InputStream input = this.sock.getInputStream()) &#123;</span><br><span class="line">            try (OutputStream output = this.sock.getOutputStream()) &#123;</span><br><span class="line">                handle(input, output);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                this.sock.close();</span><br><span class="line">            &#125; catch (IOException ioe) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;client disconnected.&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        只需要在handle()方法中，用Reader读取HTTP请求，用Writer发送HTTP响应</span><br><span class="line">        即可实现一个最简单的HTTP服务器</span><br><span class="line">     */</span><br><span class="line">    private void handle(InputStream input, OutputStream output) throws IOException &#123;</span><br><span class="line">        System.out.println(&quot;Process new http request...&quot;);</span><br><span class="line">        BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));</span><br><span class="line">        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));</span><br><span class="line">        // 读取HTTP请求:</span><br><span class="line">        boolean requestOk = false;</span><br><span class="line">        String first = reader.readLine();</span><br><span class="line">        if (first.startsWith(&quot;GET / HTTP/1.&quot;)) &#123;</span><br><span class="line">            requestOk = true;</span><br><span class="line">        &#125;</span><br><span class="line">        for (;;) &#123;</span><br><span class="line">            String header = reader.readLine();</span><br><span class="line">            if (header.isEmpty()) &#123; // 读取到空行时, HTTP Header读取完毕</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(header);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(requestOk ? &quot;Response OK&quot; : &quot;Response Error&quot;);</span><br><span class="line">        if (!requestOk) &#123;</span><br><span class="line">            // 发送错误响应:</span><br><span class="line">            writer.write(&quot;HTTP/1.0 404 Not Found\r\n&quot;);</span><br><span class="line">            writer.write(&quot;Content-Length: 0\r\n&quot;);</span><br><span class="line">            writer.write(&quot;\r\n&quot;);</span><br><span class="line">            writer.flush();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 发送成功响应:</span><br><span class="line">            String data = &quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello, world!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;;</span><br><span class="line">            int length = data.getBytes(StandardCharsets.UTF_8).length;</span><br><span class="line">            writer.write(&quot;HTTP/1.0 200 OK\r\n&quot;);</span><br><span class="line">            writer.write(&quot;Connection: close\r\n&quot;);</span><br><span class="line">            writer.write(&quot;Content-Type: text/html\r\n&quot;);</span><br><span class="line">            writer.write(&quot;Content-Length: &quot; + length + &quot;\r\n&quot;);</span><br><span class="line">            writer.write(&quot;\r\n&quot;); // 空行标识Header和Body的分隔</span><br><span class="line">            writer.write(data);</span><br><span class="line">            writer.flush();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h2 id="程序执行流程"><a href="#程序执行流程" class="headerlink" title="程序执行流程"></a>程序执行流程</h2><ol>
+<li>创建ServerSocket监听指定端口<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ServerSocket ss = new ServerSocket(8080);</span><br></pre></td></tr></table></figure></li>
+<li>创建Socket接收请求<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Socket sock = ss.accept();</span><br></pre></td></tr></table></figure></li>
+<li>利用自己编写的Handler类处理请求并回应</li>
+<li>而在Handler类中主要实现了一个handle()方法<ul>
+<li>用Reader读取HTTP请求，用Writer发送HTTP响应</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重定向与转发</title>
+    <url>/2022/04/18/%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E8%BD%AC%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><ul>
+<li>Redirect: 重定向是指当浏览器请求一个URL时，服务器返回一个重定向指令，告诉浏览器地址已经变了，需要使用新的URL再重新发送新请求。</li>
+<li>例如，编写一个能处理 /hello 的 HelloServlet ，再编写一个路径为 /hi 的 RedirectServlet，将 /hi 重定向为 /hello</li>
+<li>HelloServlet<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@WebServlet(urlPatterns = &quot;/hello&quot;)</span><br><span class="line">public class HelloServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span><br><span class="line">        resp.setContentType(&quot;text/html&quot;);</span><br><span class="line">        String name = req.getParameter(&quot;name&quot;);</span><br><span class="line">        if (name == null) &#123;</span><br><span class="line">            name = &quot;world&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        PrintWriter pw = resp.getWriter();</span><br><span class="line">        pw.write(&quot;&lt;h1&gt;Hello, &quot; + name + &quot;!!!!&lt;/h1&gt;&quot;);</span><br><span class="line">        pw.flush();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>RedirectServlet<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@WebServlet(urlPatterns = &quot;/hi&quot;)</span><br><span class="line">public class RedirectServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span><br><span class="line">        // 构造重定向的路径</span><br><span class="line">        String name = req.getParameter(&quot;name&quot;);</span><br><span class="line">        String redirectToUrl = &quot;/hello&quot; + (name == null ? &quot;&quot; : &quot;?name=&quot; + name);</span><br><span class="line">        // 发送重定向响应(临时)</span><br><span class="line">        resp.sendRedirect(redirectToUrl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="重定向类别"><a href="#重定向类别" class="headerlink" title="重定向类别"></a>重定向类别</h2></li>
+<li>重定向有两种：一种是 302 响应，称为临时重定向，一种是 301 响应，称为永久重定向。两者的区别是，如果服务器发送 301 永久重定向响应，浏览器会缓存 /hi 到 /hello 这个重定向的关联，下次请求 /hi 的时候，浏览器就直接发送 /hello 请求了。</li>
+</ul>
+<h2 id="转发"><a href="#转发" class="headerlink" title="转发"></a>转发</h2><ul>
+<li>Forward: 指内部转发，当一个Servlet处理请求的时候，它可以决定自己不继续处理，而是转发给另一个Servlet处理。</li>
+<li>例如，基于之前能处理 /hello 的 HelloServlet ，编写一个能处理 /morning 的 ForwardServlet<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@WebServlet(urlPatterns = &quot;/morning&quot;)</span><br><span class="line">public class ForwardServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span><br><span class="line">        req.getRequestDispatcher(&quot;/hello&quot;).forward(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web开发</tag>
+      </tags>
+  </entry>
 </search>

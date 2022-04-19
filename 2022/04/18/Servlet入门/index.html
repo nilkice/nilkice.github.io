@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c4246cf4398a83d136050a3ebb4e67d5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Servlet入门 - nilkice</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="nilkice,"> 
+    <meta name="description" content="welcome to my blog,webServlet入门
+实现一个最简单的Servlet
+
+代码解读123456789101112131415// WebServlet注解表示这是一个Servlet，并映射到地址/:@WebSer,"> 
+    <meta name="author" content="likunlin"> 
+    <link rel="alternative" href="/atom.xml" title="nilkice" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">nilkice</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://likunlin.top"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Servlet入门</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Servlet入门</h1>
+        <div class="stuff">
+            <span>四月 18, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发</a></li></ul>
+
+
+        </div>
+        
+        <div class="content markdown">
+            <h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="Servlet入门"><a href="#Servlet入门" class="headerlink" title="Servlet入门"></a>Servlet入门</h2><ul>
+<li>实现一个最简单的Servlet</li>
+</ul>
+<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// WebServlet注解表示这是一个Servlet，并映射到地址/:</span><br><span class="line">@WebServlet(urlPatterns = &quot;/&quot;)</span><br><span class="line">public class HelloServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp)</span><br><span class="line">            throws ServletException, IOException &#123;</span><br><span class="line">        // 设置响应类型:</span><br><span class="line">        resp.setContentType(&quot;text/html&quot;);</span><br><span class="line">        // 获取输出流:</span><br><span class="line">        PrintWriter pw = resp.getWriter();</span><br><span class="line">        // 写入响应:</span><br><span class="line">        pw.write(&quot;&lt;h1&gt;Hello, world!&lt;/h1&gt;&quot;);</span><br><span class="line">        // 最后不要忘记flush强制输出:</span><br><span class="line">        pw.flush();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="依赖需求"><a href="#依赖需求" class="headerlink" title="依赖需求"></a>依赖需求</h2><ul>
+<li>应用继承的HttpServlet需要依赖Servlet API，需要在Maven中引入相关的jar包，在pom.xml中添加<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;4.0.1&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt; </span><br><span class="line"></span><br><span class="line">&lt;packaging&gt;war&lt;/packaging&gt;	</span><br></pre></td></tr></table></figure></li>
+<li><packaging>标签中指定为war，表示该程序为Java Web Application Archive</li>
+<li>我们还需要在工程目录下创建一个web.xml描述文件，放到src/main/webapp/WEB-INF目录下（固定目录结构，不要修改路径，注意大小写）</li>
+<li>Web应用程序与一般Java程序不同，必须先启动Web服务器，再由服务器加载编写的HelloServlet，让HelloServlet处理浏览器发送的请求，如tomcat<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在IDEA中配置tomcat</span><br><span class="line">-Run/Debug Configuratons</span><br><span class="line">	-Application</span><br><span class="line">		-tomcat Local</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="程序执行流程"><a href="#程序执行流程" class="headerlink" title="程序执行流程"></a>程序执行流程</h2><ol>
+<li>启动tomcat服务器，也就是启动Java虚拟机，执行tomcat的main()方法</li>
+<li>tomcat加载.war文件，并创建一个HelloServlet实例</li>
+<li>浏览器对服务器发出请求</li>
+<li>HelloServlet实例处理请求并响应</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="https://link.hhtjim.com/163/1907751320.mp3">
+            </audio>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='07f1acf93d98dc2b0680'
+        data-cs='a9073be7473b59c76f0c7eddf713a73a4ddb7fc1'
+        data-r='nilkice_comment'
+        data-o='nilkice'
+        data-a='nilkice'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
